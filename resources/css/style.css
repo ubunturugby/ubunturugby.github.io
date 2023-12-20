@@ -143,3 +143,11 @@ section {
 .list-group-item {
     background-color: rgb(0, 0, 0);
 }
+
+.hover-maximize {
+    transition: all 0.2s ease;
+}
+
+.hover-maximize:hover {
+    transform: scale(1.02);
+}
