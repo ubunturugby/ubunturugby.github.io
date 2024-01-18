@@ -189,4 +189,8 @@ a:hover > div {
         margin-top: 20px;
         margin-bottom: 30px;
     }
+
+    .news {
+        margin-top: 150px;
+    }
 }
