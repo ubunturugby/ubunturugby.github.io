@@ -30,12 +30,12 @@
     <body class="shop-bg bg-dark text-white">
         <nav class="navbar navbar-expand-sm sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img
                         src="resources/images/logo1.png"
-                        alt="Bootstrap"
-                        width="100"
-                        height="100"
+                        alt="Ubuntu Rugby Logo"
+                        width="80"
+                        height="80"
                     />
                 </a>
                 <button
@@ -51,33 +51,34 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div
-                        class="w-100 d-flex justify-content-center justify-content-lg-end"
+                        class="w-100 d-flex justify-content-center"
                     >
                         <ul class="navbar-nav fs-5 gap-3">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Inicio</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="about.html" id="navbarDarkDropdownMenuLink"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Clube
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="about.html">Sobre nós</a></li>
+                                    <li><a class="dropdown-item" href="values.html">Valores</a></li>
+                                    <li><a class="dropdown-item" href="training.html">Treinos</a></li>
+                                    <li><a class="dropdown-item" href="teams.html">Equipas</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html"
-                                    >Sobre nós</a
+                                <a class="nav-link" href="news.html"
+                                    >Notícias</a
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="teams.html"
-                                    >Equipas</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link active"
-                                    aria-current="page"
-                                    href="shop.html"
+                                <a class="nav-link active" href="shop.html"
                                     >Loja</a
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="news.html"
-                                    >Noticías</a
+                                <a class="nav-link" href="partners.html"
+                                    >Sócios</a
                                 >
                             </li>
                             <li class="nav-item">
@@ -86,6 +87,16 @@
                                 >
                             </li>
                         </ul>
+                    </div>
+                    <div class="justify-content-end">
+                            <a
+                                class="btn btn-dark btn-brand mt-1"
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSdFQ7QOAIOeGdGVenXPE8Ec5XkouDBsCYpzuDceLynFAXsL9g/viewform'
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                INSCRIÇÃO
+                            </a>
                     </div>
                 </div>
             </div>
@@ -188,14 +199,15 @@
                             </div>
 
                             <div class="card-footer mb-2">
-                                <button
-                                    type="submit"
+                                <a
                                     class="btn btn-danger w-100 rounded-1"
                                     disabled
-                                    onclick= "window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSc22SX1UcfBE4HcJCHzgI9N0JZ8ruYVSOIwxzTaqAzqmqfc7A/viewform';"
+                                    href='https://docs.google.com/forms/d/e/1FAIpQLSc22SX1UcfBE4HcJCHzgI9N0JZ8ruYVSOIwxzTaqAzqmqfc7A/viewform'
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Esgotado
-                                </button>
+                            </a>
                             </div>
                         </div>
                     </div>
@@ -284,13 +296,14 @@
                             </div>
 
                             <div class="card-footer mb-2">
-                                <button
-                                    type="submit"
+                                <a
                                     class="btn btn-comprar w-100 rounded-1"
-                                    onclick= "window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSe36vhwrjqcMk3QeYp1p49uzfEloy0RqhW4wdnZjTEzExyfdw/viewform';"
+                                    href='https://docs.google.com/forms/d/e/1FAIpQLSe36vhwrjqcMk3QeYp1p49uzfEloy0RqhW4wdnZjTEzExyfdw/viewform'
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Comprar
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -346,13 +359,14 @@
                             </div>
 
                             <div class="card-footer mb-2">
-                                <button
-                                    type="submit"
+                                <a
                                     class="btn btn-comprar w-100 rounded-1"
-                                    onclick= "window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfW7BaV2PXeafwTBvwSmDKV6PFLN-wqaMS1TmgKJaxUgf_IQw/viewform';"
+                                    href='https://docs.google.com/forms/d/e/1FAIpQLSfW7BaV2PXeafwTBvwSmDKV6PFLN-wqaMS1TmgKJaxUgf_IQw/viewform'
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Comprar
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -424,13 +438,14 @@
                             </div>
 
                             <div class="card-footer mb-2">
-                                <button
-                                    type="submit"
+                                <a
                                     class="btn btn-comprar w-100 rounded-1"
-                                    onclick= "window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdmLbQ2H1Dep50BBTXgoMyXcxluLZPrBR2--M7536_puNTn0w/viewform';"
+                                    href='https://docs.google.com/forms/d/e/1FAIpQLSdmLbQ2H1Dep50BBTXgoMyXcxluLZPrBR2--M7536_puNTn0w/viewform'
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Comprar
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -545,13 +560,14 @@
                             </div>
 
                             <div class="card-footer mb-2">
-                                <button
-                                    type="submit"
+                                <a
                                     class="btn btn-comprar w-100 rounded-1"
-                                    onclick= "window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfK_GCK-0OmTaxMpkelANVLBq3vTFkp6dv4yBm08i__rM3XEg/viewform';"
+                                    href='https://docs.google.com/forms/d/e/1FAIpQLSfK_GCK-0OmTaxMpkelANVLBq3vTFkp6dv4yBm08i__rM3XEg/viewform'
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Comprar
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -624,13 +640,14 @@
                             </div>
 
                             <div class="card-footer mb-2">
-                                <button
-                                    type="submit"
+                                <a
                                     class="btn btn-comprar w-100 rounded-1"
-                                    onclick= "window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfK_GCK-0OmTaxMpkelANVLBq3vTFkp6dv4yBm08i__rM3XEg/viewform';"
+                                    href='https://docs.google.com/forms/d/e/1FAIpQLSfK_GCK-0OmTaxMpkelANVLBq3vTFkp6dv4yBm08i__rM3XEg/viewform'
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Comprar
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -728,13 +745,14 @@
                             </div>
 
                             <div class="card-footer mb-2">
-                                <button
-                                    type="submit"
+                                <a
                                     class="btn btn-comprar w-100 rounded-1"
-                                    onclick= "window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSci396oauMdF127pReMrJtDZXfym2_LUuJo32Osmw90J2wwZw/viewform';"
+                                    href='https://docs.google.com/forms/d/e/1FAIpQLSci396oauMdF127pReMrJtDZXfym2_LUuJo32Osmw90J2wwZw/viewform'
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Comprar
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -806,13 +824,14 @@
                             </div>
 
                             <div class="card-footer mb-2">
-                                <button
-                                    type="submit"
+                                <a
                                     class="btn btn-comprar w-100 rounded-1"
-                                    onclick= "window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSeV6cK7FpfgZWiUzVmKSDpwhe4IhvTTsSWiwJgg5Ascw9fB0Q/viewform';"
+                                    href='https://docs.google.com/forms/d/e/1FAIpQLSeV6cK7FpfgZWiUzVmKSDpwhe4IhvTTsSWiwJgg5Ascw9fB0Q/viewform'
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Comprar
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -848,13 +867,14 @@
                             </div>
 
                             <div class="card-footer mb-2">
-                                <button
-                                    type="submit"
+                                <a
                                     class="btn btn-comprar w-100 rounded-1"
-                                    onclick= "window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfK657S9U0XMF01A4AquB8BrQTKqXwMHQAf6DLlq0trw7Bf_w/viewform';"
+                                    href='https://docs.google.com/forms/d/e/1FAIpQLSfK657S9U0XMF01A4AquB8BrQTKqXwMHQAf6DLlq0trw7Bf_w/viewform'
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Comprar
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>

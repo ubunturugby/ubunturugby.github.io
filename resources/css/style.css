@@ -26,11 +26,25 @@ a:hover > div {
 .navbar {
     background-color: rgba(0, 0, 0);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    height: 80px;
 }
 
-.nav-item button {
+.nav-link {
+    font-size: medium;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-brand {
     background-color: orange;
     border-radius: 4px;
+    font-size: small;
+}
+
+.nav-link:hover {
+    color: orange !important;
 }
 
 .nav-link.active,
@@ -106,12 +120,11 @@ a:hover > div {
 .background {
     max-width: 1900px;
     max-height: 940px;
-    background-image: url("../../resources/images/background.JPG");
+    background-image: url("../../resources/images/bg.jpg");
     background-repeat: no-repeat;
     object-fit: cover;
     /* Add the blur effect */
     /* Center and scale the image nicely */
-    backdrop-filter: blur(5px);
     background-repeat: no-repeat;
     background-size: cover;
 }
