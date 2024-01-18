@@ -1,892 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>UBUNTU RUGBY • Loja</title>
 
-        <link rel="icon" type="image/x-icon" href="resources/images/logo.ico" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UBUNTU RUGBY • Loja</title>
 
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-            crossorigin="anonymous"
-        />
+    <link rel="icon" type="image/x-icon" href="resources/images/logo.ico" />
 
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-        />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
 
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
+    <link rel="stylesheet" href="resources/css/style.css" />
 
-        <link rel="stylesheet" href="resources/css/style.css" />
-    </head>
-    <body class="shop-bg bg-dark text-white">
-        <nav class="navbar navbar-expand-sm sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img
-                        src="resources/images/logo1.png"
-                        alt="Ubuntu Rugby Logo"
-                        width="80"
-                        height="80"
-                    />
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="bi bi-list fs-1 text-white"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <div
-                        class="w-100 d-flex justify-content-center"
-                    >
-                        <ul class="navbar-nav fs-5 gap-3">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="about.html" id="navbarDarkDropdownMenuLink"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Clube
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="about.html">Sobre nós</a></li>
-                                    <li><a class="dropdown-item" href="values.html">Valores</a></li>
-                                    <li><a class="dropdown-item" href="training.html">Treinos</a></li>
-                                    <li><a class="dropdown-item" href="teams.html">Equipas</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="news.html"
-                                    >Notícias</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="shop.html"
-                                    >Loja</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="partners.html"
-                                    >Sócios</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contacts.html"
-                                    >Contactos</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="justify-content-end">
-                            <a
-                                class="btn btn-dark btn-brand mt-1"
-                                href='https://docs.google.com/forms/d/e/1FAIpQLSdFQ7QOAIOeGdGVenXPE8Ec5XkouDBsCYpzuDceLynFAXsL9g/viewform'
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                INSCRIÇÃO
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body class="shop-bg bg-dark text-white">
+    <nav class="navbar navbar-expand-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="resources/images/logo1.png" alt="Ubuntu Rugby Logo" width="80" height="80" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="bi bi-list fs-1 text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="w-100 d-flex justify-content-center">
+                    <ul class="navbar-nav fs-5 gap-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="about.html" id="navbarDarkDropdownMenuLink"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Clube
                             </a>
-                    </div>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="about.html">Sobre nós</a></li>
+                                <li><a class="dropdown-item" href="values.html">Valores</a></li>
+                                <li><a class="dropdown-item" href="training.html">Treinos</a></li>
+                                <li><a class="dropdown-item" href="teams.html">Equipas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="shop.html">Loja</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="partners.html">Sócios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">Contactos</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </nav>
-        <div class="my-4 container animate__animated animate__fadeInLeft">
-            <div class="container-fluid">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                    <div class="col d-flex justify-content-center">
-                        <div class="card text-center border border-secondary opacity-50">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Popular</div>
-                            <img
-                                src="resources/images/shop/sweatshirt.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Sweat Shirt</h4>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div
-                                        class="d-flex justify-content-between gap-2"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>8a</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 32px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>12a</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-center">
-                                    <div
-                                        class="d-flex justify-content-between gap-2"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>S</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>M</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>L</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XL</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 35px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XXL</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr />
-                                <div class="d-flex justify-content-center">
-                                    <div class="d-flex justify-content-center">
-                                        <h5>45.00€</h5>
-                                        <p class="text-muted text-decoration-line-through ms-2">50.00€</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card-footer mb-2">
-                                <a
-                                    class="btn btn-danger w-100 rounded-1"
-                                    disabled
-                                    href='https://docs.google.com/forms/d/e/1FAIpQLSc22SX1UcfBE4HcJCHzgI9N0JZ8ruYVSOIwxzTaqAzqmqfc7A/viewform'
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Esgotado
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col d-flex justify-content-center">
-                        <div class="card text-center border-secondary hover-maximize">
-                            <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem; background-color: rgb(255, 102, 0);">Novidade</div>
-                            <img
-                                src="resources/images/shop/corta-vento.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Corta Vento</h4>
-
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div
-                                        class="d-flex justify-content-between gap-2"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 32px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>10a</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-center">
-                                    <div
-                                        class="d-flex justify-content-between gap-2"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>S</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>M</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>L</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XL</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 35px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XXL</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr />
-                                <div class="d-flex justify-content-center">
-                                    <h5>50.00€</h5>
-                                </div>
-                            </div>
-
-                            <div class="card-footer mb-2">
-                                <a
-                                    class="btn btn-comprar w-100 rounded-1"
-                                    href='https://docs.google.com/forms/d/e/1FAIpQLSe36vhwrjqcMk3QeYp1p49uzfEloy0RqhW4wdnZjTEzExyfdw/viewform'
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Comprar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col d-flex justify-content-center">
-                        <div class="card text-center border-secondary hover-maximize">
-                            <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem; background-color: rgb(255, 102, 0);">Novidade</div>
-                            <img
-                                src="resources/images/shop/camisola.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Camisola</h4>
-
-                                <div class="d-flex justify-content-center">
-                                    <div
-                                        class="d-flex justify-content-between gap-2 my-3"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>S</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>M</p>
-                                        </div>
-                                        <div
-                                            class="border border-secondary rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p class="text-muted">L</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr />
-                                <div class="d-flex justify-content-center">
-                                    <h5>20.00€</h5>
-                                </div>
-                            </div>
-
-                            <div class="card-footer mb-2">
-                                <a
-                                    class="btn btn-comprar w-100 rounded-1"
-                                    href='https://docs.google.com/forms/d/e/1FAIpQLSfW7BaV2PXeafwTBvwSmDKV6PFLN-wqaMS1TmgKJaxUgf_IQw/viewform'
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Comprar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col d-flex justify-content-center">
-                        <div class="card text-center border-secondary hover-maximize">
-                            <img
-                                src="resources/images/shop/parka.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Parka</h4>
-                                <div class="d-flex justify-content-center">
-                                    <div
-                                        class="d-flex justify-content-between gap-2 my-3"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>S</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>M</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>L</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XL</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 35px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XXL</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr />
-                                <div class="d-flex justify-content-center">
-                                    <h5>75.00€</h5>
-                                </div>
-                            </div>
-
-                            <div class="card-footer mb-2">
-                                <a
-                                    class="btn btn-comprar w-100 rounded-1"
-                                    href='https://docs.google.com/forms/d/e/1FAIpQLSdmLbQ2H1Dep50BBTXgoMyXcxluLZPrBR2--M7536_puNTn0w/viewform'
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Comprar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col d-flex justify-content-center">
-                        <div class="card text-center border-secondary hover-maximize">
-                            <img
-                                src="resources/images/shop/kit.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Kit de Jogo (Kids)</h4>
-
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div
-                                        class="d-flex justify-content-between gap-2"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>8a</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 32px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>10a</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 32px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>12a</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 32px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>14a</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-center">
-                                    <div
-                                        class="d-flex justify-content-between gap-2"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>S</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>M</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>L</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XL</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 35px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XXL</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr />
-                                <div class="d-flex justify-content-center">
-                                    <h5>45.00€</h5>
-                                </div>
-                            </div>
-
-                            <div class="card-footer mb-2">
-                                <a
-                                    class="btn btn-comprar w-100 rounded-1"
-                                    href='https://docs.google.com/forms/d/e/1FAIpQLSfK_GCK-0OmTaxMpkelANVLBq3vTFkp6dv4yBm08i__rM3XEg/viewform'
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Comprar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col d-flex justify-content-center">
-                        <div class="card text-center border-secondary hover-maximize">
-                            <img
-                                src="resources/images/shop/kit.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Kit de Jogo (Séniores)</h4>
-
-                                <div class="d-flex justify-content-center">
-                                    <div
-                                        class="d-flex justify-content-between gap-2"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>S</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>M</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>L</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XL</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 35px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XXL</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr />
-                                <div class="d-flex justify-content-center">
-                                    <h5>25.00€</h5>
-                                </div>
-                            </div>
-
-                            <div class="card-footer mb-2">
-                                <a
-                                    class="btn btn-comprar w-100 rounded-1"
-                                    href='https://docs.google.com/forms/d/e/1FAIpQLSfK_GCK-0OmTaxMpkelANVLBq3vTFkp6dv4yBm08i__rM3XEg/viewform'
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Comprar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col d-flex justify-content-center">
-                        <div class="card text-center border-secondary hover-maximize">
-                            <img
-                                src="resources/images/shop/tshirt.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">T-Shirt</h4>
-
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div
-                                        class="d-flex justify-content-between gap-2"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>8a</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 32px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>10a</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-center">
-                                    <div
-                                        class="d-flex justify-content-between gap-2"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>S</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>M</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>L</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XL</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 35px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XXL</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr />
-                                <div class="d-flex justify-content-center">
-                                    <h5>20.00€</h5>
-                                </div>
-                            </div>
-
-                            <div class="card-footer mb-2">
-                                <a
-                                    class="btn btn-comprar w-100 rounded-1"
-                                    href='https://docs.google.com/forms/d/e/1FAIpQLSci396oauMdF127pReMrJtDZXfym2_LUuJo32Osmw90J2wwZw/viewform'
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Comprar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col d-flex justify-content-center">
-                        <div class="card text-center border-secondary hover-maximize">
-                            <img
-                                src="resources/images/shop/cava.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Manga Cava</h4>
-                                <div class="d-flex justify-content-center">
-                                    <div
-                                        class="d-flex justify-content-between gap-2 my-3"
-                                    >
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>S</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>M</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>L</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 25px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XL</p>
-                                        </div>
-                                        <div
-                                            class="border border-light rounded-2 text-center"
-                                            style="
-                                                width: 35px;
-                                                height: 25px;
-                                            "
-                                        >
-                                            <p>XXL</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr />
-                                <div class="d-flex justify-content-center">
-                                    <h5>17.00€</h5>
-                                </div>
-                            </div>
-
-                            <div class="card-footer mb-2">
-                                <a
-                                    class="btn btn-comprar w-100 rounded-1"
-                                    href='https://docs.google.com/forms/d/e/1FAIpQLSeV6cK7FpfgZWiUzVmKSDpwhe4IhvTTsSWiwJgg5Ascw9fB0Q/viewform'
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Comprar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col d-flex justify-content-center">
-                        <div class="card text-center border-secondary hover-maximize">
-                            <img
-                                src="resources/images/shop/porta-chaves.jpg"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">Porta Chaves</h4>
-                                <div class="d-flex justify-content-center">
-                                    <div
-                                        class="d-flex justify-content-between gap-2 my-3"
-                                    >
-                                    <div
-                                    class="border border-light rounded-2 text-center"
-                                    style="
-                                        width: 125px;
-                                        height: 25px;
-                                    "
-                                >
-                                    <p>Tamanho Único</p>
-                                </div>
-                                    </div>
-                                </div>
-                                <hr />
-                                <div class="d-flex justify-content-center">
-                                    <h5>12.00€</h5>
-                                </div>
-                            </div>
-
-                            <div class="card-footer mb-2">
-                                <a
-                                    class="btn btn-comprar w-100 rounded-1"
-                                    href='https://docs.google.com/forms/d/e/1FAIpQLSfK657S9U0XMF01A4AquB8BrQTKqXwMHQAf6DLlq0trw7Bf_w/viewform'
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Comprar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
+                <div class="registration">
+                    <a class="btn btn-dark btn-brand"
+                        href='https://docs.google.com/forms/d/e/1FAIpQLSdFQ7QOAIOeGdGVenXPE8Ec5XkouDBsCYpzuDceLynFAXsL9g/viewform'
+                        target="_blank" rel="noopener noreferrer">
+                        INSCRIÇÃO
+                    </a>
                 </div>
             </div>
         </div>
+    </nav>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <div class="my-4 container animate__animated animate__fadeInLeft">
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col d-flex justify-content-center">
+                    <div class="card text-center border border-secondary opacity-50">
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            Popular</div>
+                        <img src="resources/images/shop/sweatshirt.png" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h4 class="card-title">Sweat Shirt</h4>
+                            <div class="d-flex justify-content-center mb-2">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>8a</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 32px;
+                                                height: 25px;
+                                            ">
+                                        <p>12a</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>S</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>M</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>L</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>XL</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 35px;
+                                                height: 25px;
+                                            ">
+                                        <p>XXL</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center">
+                                    <h5>45.00€</h5>
+                                    <p class="text-muted text-decoration-line-through ms-2">50.00€</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer mb-2">
+                            <a class="btn btn-danger w-100 rounded-1" disabled
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSc22SX1UcfBE4HcJCHzgI9N0JZ8ruYVSOIwxzTaqAzqmqfc7A/viewform'
+                                target="_blank" rel="noopener noreferrer">
+                                Esgotado
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex justify-content-center">
+                    <div class="card text-center border-secondary hover-maximize">
+                        <div class="badge text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem; background-color: rgb(255, 102, 0);">Novidade</div>
+                        <img src="resources/images/shop/corta-vento.png" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h4 class="card-title">Corta Vento</h4>
+
+                            <div class="d-flex justify-content-center mb-2">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 32px;
+                                                height: 25px;
+                                            ">
+                                        <p>10a</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>S</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>M</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>L</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>XL</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 35px;
+                                                height: 25px;
+                                            ">
+                                        <p>XXL</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="d-flex justify-content-center">
+                                <h5>50.00€</h5>
+                            </div>
+                        </div>
+
+                        <div class="card-footer mb-2">
+                            <a class="btn btn-comprar w-100 rounded-1"
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSe36vhwrjqcMk3QeYp1p49uzfEloy0RqhW4wdnZjTEzExyfdw/viewform'
+                                target="_blank" rel="noopener noreferrer">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex justify-content-center">
+                    <div class="card text-center border-secondary hover-maximize">
+                        <div class="badge text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem; background-color: rgb(255, 102, 0);">Novidade</div>
+                        <img src="resources/images/shop/camisola.png" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h4 class="card-title">Camisola</h4>
+
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-between gap-2 my-3">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>S</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>M</p>
+                                    </div>
+                                    <div class="border border-secondary rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p class="text-muted">L</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="d-flex justify-content-center">
+                                <h5>20.00€</h5>
+                            </div>
+                        </div>
+
+                        <div class="card-footer mb-2">
+                            <a class="btn btn-comprar w-100 rounded-1"
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSfW7BaV2PXeafwTBvwSmDKV6PFLN-wqaMS1TmgKJaxUgf_IQw/viewform'
+                                target="_blank" rel="noopener noreferrer">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex justify-content-center">
+                    <div class="card text-center border-secondary hover-maximize">
+                        <img src="resources/images/shop/parka.png" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h4 class="card-title">Parka</h4>
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-between gap-2 my-3">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>S</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>M</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>L</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>XL</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 35px;
+                                                height: 25px;
+                                            ">
+                                        <p>XXL</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="d-flex justify-content-center">
+                                <h5>75.00€</h5>
+                            </div>
+                        </div>
+
+                        <div class="card-footer mb-2">
+                            <a class="btn btn-comprar w-100 rounded-1"
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSdmLbQ2H1Dep50BBTXgoMyXcxluLZPrBR2--M7536_puNTn0w/viewform'
+                                target="_blank" rel="noopener noreferrer">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex justify-content-center">
+                    <div class="card text-center border-secondary hover-maximize">
+                        <img src="resources/images/shop/kit.png" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h4 class="card-title">Kit de Jogo (Kids)</h4>
+
+                            <div class="d-flex justify-content-center mb-2">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>8a</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 32px;
+                                                height: 25px;
+                                            ">
+                                        <p>10a</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 32px;
+                                                height: 25px;
+                                            ">
+                                        <p>12a</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 32px;
+                                                height: 25px;
+                                            ">
+                                        <p>14a</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>S</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>M</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>L</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>XL</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 35px;
+                                                height: 25px;
+                                            ">
+                                        <p>XXL</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="d-flex justify-content-center">
+                                <h5>45.00€</h5>
+                            </div>
+                        </div>
+
+                        <div class="card-footer mb-2">
+                            <a class="btn btn-comprar w-100 rounded-1"
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSfK_GCK-0OmTaxMpkelANVLBq3vTFkp6dv4yBm08i__rM3XEg/viewform'
+                                target="_blank" rel="noopener noreferrer">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex justify-content-center">
+                    <div class="card text-center border-secondary hover-maximize">
+                        <img src="resources/images/shop/kit.png" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h4 class="card-title">Kit de Jogo (Séniores)</h4>
+
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>S</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>M</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>L</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>XL</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 35px;
+                                                height: 25px;
+                                            ">
+                                        <p>XXL</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="d-flex justify-content-center">
+                                <h5>25.00€</h5>
+                            </div>
+                        </div>
+
+                        <div class="card-footer mb-2">
+                            <a class="btn btn-comprar w-100 rounded-1"
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSfK_GCK-0OmTaxMpkelANVLBq3vTFkp6dv4yBm08i__rM3XEg/viewform'
+                                target="_blank" rel="noopener noreferrer">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col d-flex justify-content-center">
+                    <div class="card text-center border-secondary hover-maximize">
+                        <img src="resources/images/shop/tshirt.png" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h4 class="card-title">T-Shirt</h4>
+
+                            <div class="d-flex justify-content-center mb-2">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>8a</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 32px;
+                                                height: 25px;
+                                            ">
+                                        <p>10a</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>S</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>M</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>L</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>XL</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 35px;
+                                                height: 25px;
+                                            ">
+                                        <p>XXL</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="d-flex justify-content-center">
+                                <h5>20.00€</h5>
+                            </div>
+                        </div>
+
+                        <div class="card-footer mb-2">
+                            <a class="btn btn-comprar w-100 rounded-1"
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSci396oauMdF127pReMrJtDZXfym2_LUuJo32Osmw90J2wwZw/viewform'
+                                target="_blank" rel="noopener noreferrer">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex justify-content-center">
+                    <div class="card text-center border-secondary hover-maximize">
+                        <img src="resources/images/shop/cava.png" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h4 class="card-title">Manga Cava</h4>
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-between gap-2 my-3">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>S</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>M</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>L</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 25px;
+                                                height: 25px;
+                                            ">
+                                        <p>XL</p>
+                                    </div>
+                                    <div class="border border-light rounded-2 text-center" style="
+                                                width: 35px;
+                                                height: 25px;
+                                            ">
+                                        <p>XXL</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="d-flex justify-content-center">
+                                <h5>17.00€</h5>
+                            </div>
+                        </div>
+
+                        <div class="card-footer mb-2">
+                            <a class="btn btn-comprar w-100 rounded-1"
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSeV6cK7FpfgZWiUzVmKSDpwhe4IhvTTsSWiwJgg5Ascw9fB0Q/viewform'
+                                target="_blank" rel="noopener noreferrer">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex justify-content-center">
+                    <div class="card text-center border-secondary hover-maximize">
+                        <img src="resources/images/shop/porta-chaves.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h4 class="card-title">Porta Chaves</h4>
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-between gap-2 my-3">
+                                    <div class="border border-light rounded-2 text-center" style="
+                                        width: 125px;
+                                        height: 25px;
+                                    ">
+                                        <p>Tamanho Único</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="d-flex justify-content-center">
+                                <h5>12.00€</h5>
+                            </div>
+                        </div>
+
+                        <div class="card-footer mb-2">
+                            <a class="btn btn-comprar w-100 rounded-1"
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSfK657S9U0XMF01A4AquB8BrQTKqXwMHQAf6DLlq0trw7Bf_w/viewform'
+                                target="_blank" rel="noopener noreferrer">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
