@@ -72,45 +72,115 @@
     </nav>
 
     <div class="contacts-container row row-cols-1 row-cols-md-2 row-cols-lg-2">
-        <div class="col card contacts text-start p-2 rounded-3">
+        <div class="col card contacts text-start p-2 rounded-3 border-light">
             <div class="card-header">
                 <small>Saiba onde estamos e como nos pode contactar</small>
                 <h3>CONTACTOS</h3>
             </div>
-            <div class="card-body">
+            <div class="card-body flex">
                 <div class="d-flex mb-3">
-                    <i class="bi bi-geo-alt mt-2"></i>
-                    <div class="ms-2">
+                    <i class="bi bi-geo-alt mt-2 me-3"></i>
+                    <div class="ms-1">
                         Praceta Lima de Freitas 5,
                         <br />
                         2725-397 Algueirão-Mem Martins
                     </div>
                 </div>
-                <a class="list-group-item mb-3" href="mailto:geral@ubunturugby.pt" target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="bi bi-envelope me-1"></i>
-                    geral@ubunturugby.pt
-                </a>
-                <a class="list-group-item mb-3" href="tel:+351932606500" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-telephone me-1"></i>
-                    (+351) 932 606 500
-                </a>
-                <a class="list-group-item mb-3" href="https://www.instagram.com/ubuntu_rugby/" target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="bi bi-instagram me-1"></i>
-                    ubuntu_rugby
-                </a>
-                <a class="list-group-item" href="https://www.facebook.com/UbuntuRugby" target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="bi bi-facebook me-1"></i>
-                    Ubuntu Rugby
-                </a>
+                <p>
+                    <a class="contact" href="mailto:geral@ubunturugby.pt">
+                        <i class="bi bi-envelope me-3"></i>
+                        geral@ubunturugby.pt
+                    </a>
+                </p>
+                <p>
+                    <a class="contact" href="tel:+351932606500">
+                        <i class="bi bi-telephone me-3"></i>
+                        (+351) 932 606 500
+                    </a>
+                </p>
+                <p>
+                    <a class="contact" href="https://www.instagram.com/ubuntu_rugby/" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="bi bi-instagram me-3"></i>
+                        ubuntu_rugby
+                    </a>
+                </p>
+                <p>
+                    <a class="contact" href="https://www.facebook.com/UbuntuRugby" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="bi bi-facebook me-3"></i>
+                        Ubuntu Rugby
+                    </a>
+                </p>
             </div>
         </div>
         <div id="map-container-google-1" class="col z-depth-1-half map-container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3109.698842333542!2d-9.329409124374811!3d38.79353777174632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ed1beff5af7e3%3A0x9537464ca6c929f8!2sUni%C3%A3o%20Recreativa%20das%20Merc%C3%AAs!5e0!3m2!1spt-PT!2spt!4v1705656394820!5m2!1spt-PT!2spt"
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div class="footer bg-scnd px-5 pt-5 mt-5">
+        <div class="container">
+            <div class="row pb-5">
+                <div class="col-md-4 logo-footer">
+                    <img class="bg-white border p-2 rounded-circle" src="resources/images/logo.png"
+                        alt="Ubuntu Rugby Logo" width="160" height="160" />
+                </div>
+                <div class="col-md-4 item-footer">
+                    <h5 class="text-uppercase">Menu</h5>
+                    <ul class="list-unstyled pt-4">
+                        <li class="mb-2">
+                            <a href="index.html" class="link-light">Início</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="link-light"
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSdFQ7QOAIOeGdGVenXPE8Ec5XkouDBsCYpzuDceLynFAXsL9g/viewform'
+                                target="_blank" rel="noopener noreferrer">
+                                Inscrições
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="partners.html" class="link-light">Sócios</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html" class="link-light">Contactos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 item-footer">
+                    <h5 class="text-uppercase">Contactos</h5>
+                    <ul class="list-unstyled pt-4">
+                        <li>
+                            <div class="d-flex mb-3">
+                                <i class="bi bi-geo-alt mt-2 me-3"></i>
+                                <div class="ms-1">
+                                    Praceta Lima de Freitas 5,
+                                    <br />
+                                    2725-397 Algueirão-Mem Martins
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mb-3">
+                            <a class="contact" href="mailto:geral@ubunturugby.pt">
+                                <i class="bi bi-envelope me-3"></i>
+                                geral@ubunturugby.pt
+                            </a>
+                        </li>
+                        <li>
+                            <a class="contact" href="tel:+351932606500">
+                                <i class="bi bi-telephone me-3"></i>
+                                (+351) 932 606 500
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pb-5">
+                Copyright 2024
+                <i class="bi bi-c-circle text-light"></i>
+            </div>
         </div>
     </div>
 

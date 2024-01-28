@@ -137,7 +137,7 @@ a:hover>div {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.list-group-item:hover {
+.contact:hover {
     opacity: 0.9;
 }
 
@@ -215,6 +215,13 @@ a:hover>div {
 }
 
 @media (max-width: 992px) {
+    .logo-footer {
+        text-align: center;
+    }
+
+    .item-footer {
+        padding-top: 40px;
+    }
 
     .registration {
         text-align: center;
