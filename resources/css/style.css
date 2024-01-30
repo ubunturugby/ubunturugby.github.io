@@ -2,6 +2,11 @@
     border-color: red;
     border-radius: 1px;
     color: white !important;
+    font-family: 'Tahoma';
+}
+
+.font-impact {
+    font-family: 'Impact';
 }
 
 body {
@@ -96,7 +101,6 @@ a:hover>div {
     object-fit: cover;
     /* Add the blur effect */
     /* Center and scale the image nicely */
-    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -167,6 +171,7 @@ a:hover>div {
 .map-container {
     overflow: hidden;
     padding-left: 100px;
+    padding-bottom: 500px;
 }
 
 .map-container iframe {
@@ -174,6 +179,84 @@ a:hover>div {
     width: 650px;
     position: absolute;
     border-radius: 8px;
+}
+
+.numbers {
+    background-image: url("../../resources/images/bg-orange.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+@property --num {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+}
+
+.number-incr {
+    transition: --num 1s;
+    counter-reset: num var(--num);
+}
+
+.number-incr::after {
+    content: counter(num);
+}
+
+.to-9 {
+    animation: counter-9 5s ease-in-out forwards;
+}
+
+.to-70 {
+    animation: counter-70 5s ease-in-out forwards;
+}
+
+.to-100 {
+    animation: counter-100 5s ease-in-out forwards;
+}
+
+@keyframes counter-9 {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 9;
+    }
+}
+
+@keyframes counter-70 {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 70;
+    }
+}
+
+@keyframes counter-100 {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 100;
+    }
+}
+
+.vr {
+    width: 3px;
+    height: 80px;
+    opacity: 0.9;
+}
+
+.sponsor {
+    width: 150px;
+    margin-top: 20px;
 }
 
 @media (min-width: 40em) {
@@ -192,7 +275,7 @@ a:hover>div {
 
 @media (min-width: 62em) {
     .featurette-heading {
-        margin-top: 7rem;
+        margin-top: 4rem;
     }
 }
 
@@ -212,6 +295,10 @@ a:hover>div {
     .navbar {
         height: 80px;
     }
+
+    .sponsors {
+        margin: 0 200px 0 200px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -221,6 +308,7 @@ a:hover>div {
 
     .item-footer {
         padding-top: 40px;
+        text-align: center;
     }
 
     .registration {
@@ -247,6 +335,7 @@ a:hover>div {
 
     .map-container {
         padding-left: 0;
+        padding-bottom: 250px;
     }
 
     .map-container iframe {
