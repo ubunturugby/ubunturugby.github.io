@@ -2,7 +2,7 @@
     border-color: red;
     border-radius: 1px;
     color: white !important;
-    font-family: 'Tahoma';
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-impact {
@@ -259,6 +259,14 @@ a:hover>div {
     margin-top: 20px;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
+.news-text {
+    margin: 0 50px 0 50px;
+}
+
 @media (min-width: 40em) {
 
     /* Bump up size of carousel content */
@@ -343,6 +351,10 @@ a:hover>div {
         width: 350px;
         position: absolute;
         border-radius: 8px;
+    }
+
+    .news-text {
+        margin: 0 20px 0 20px;
     }
 
 }
