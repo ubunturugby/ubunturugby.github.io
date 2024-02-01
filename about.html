@@ -157,9 +157,11 @@
                         a prática do nosso desporto aos nossos atletas, ficando sempre nas nossas memórias a frase
                         “<i>…jogamos com o que temos…</i>”;
                     </li>
-                    <li><strong>Setembro de 2018</strong> - Primeira equipa de Sub-18 de Rugby de XV; Criação do escalão Feminino;
+                    <li><strong>Setembro de 2018</strong> - Primeira equipa de Sub-18 de Rugby de XV; Criação do escalão
+                        Feminino;
                     </li>
-                    <li><strong>Agosto/Setembro de 2019</strong> - Primeira atleta pertencente ao projeto a jogar um jogo internacional.
+                    <li><strong>Agosto/Setembro de 2019</strong> - Primeira atleta pertencente ao projeto a jogar um
+                        jogo internacional.
                     </li>
                 </ul>
                 </p>
@@ -272,6 +274,25 @@
 
     <script>
         AOS.init();
+    </script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAoa3jKyoHLP2uXtkIYZSmk3UbwTkKDifU",
+            authDomain: "ubuntu-rugby.firebaseapp.com",
+            projectId: "ubuntu-rugby",
+            storageBucket: "ubuntu-rugby.appspot.com",
+            messagingSenderId: "840013360731",
+            appId: "1:840013360731:web:ab6171d67e814b0e6d197e",
+            measurementId: "G-Q42T9Z76XB"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        analytics.logEvent('sobre');
     </script>
 </body>
 
