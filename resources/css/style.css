@@ -340,6 +340,10 @@ a:hover>div {
     .sponsors {
         margin: 0 200px 0 200px;
     }
+
+    .arrow-carousel {
+        margin-top: 100px;
+    }
 }
 
 @media (max-width: 992px) {
