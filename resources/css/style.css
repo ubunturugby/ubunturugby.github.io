@@ -231,15 +231,15 @@ a:hover>div {
 }
 
 .to-9 {
-    animation: counter-9 5s ease-in-out forwards;
+    animation: counter-9 3s ease-in-out forwards;
 }
 
-.to-70 {
-    animation: counter-70 5s ease-in-out forwards;
+.to-200 {
+    animation: counter-200 3s ease-in-out forwards;
 }
 
-.to-100 {
-    animation: counter-100 5s ease-in-out forwards;
+.to-400 {
+    animation: counter-400 3s ease-in-out forwards;
 }
 
 @keyframes counter-9 {
@@ -252,23 +252,23 @@ a:hover>div {
     }
 }
 
-@keyframes counter-70 {
+@keyframes counter-200 {
     from {
         --num: 0;
     }
 
     to {
-        --num: 70;
+        --num: 200;
     }
 }
 
-@keyframes counter-100 {
+@keyframes counter-400 {
     from {
         --num: 0;
     }
 
     to {
-        --num: 100;
+        --num: 400;
     }
 }
 
