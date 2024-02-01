@@ -343,6 +343,10 @@ a:hover>div {
 }
 
 @media (max-width: 992px) {
+    .page-padding {
+        padding: 40px;
+    }
+
     .logo-footer {
         text-align: center;
     }
