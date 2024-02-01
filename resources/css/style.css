@@ -58,6 +58,30 @@ a:hover>div {
     color: #ff6600 !important;
 }
 
+.train-link {
+    color: rgba(255, 255, 255, 0.575) !important;
+    font-weight: 500
+}
+
+.train-link:hover {
+    color: white !important;
+}
+
+.nav-pills .nav-link.active {
+    background-color: white;
+}
+
+.nav-link.active:hover {
+    color: #ff6600 !important;
+}
+
+.train {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 .line {
     height: 1px;
     background-color: #ff6600;
@@ -250,7 +274,7 @@ a:hover>div {
 
 .vr {
     width: 3px;
-    height: 80px;
+    height: 100px;
     opacity: 0.9;
 }
 
@@ -265,6 +289,15 @@ a:hover>div {
 
 .news-text {
     margin: 0 50px 0 50px;
+}
+
+.text-muted {
+    color: rgb(100, 106, 112) !important;
+}
+
+.text-muted:hover {
+    border-bottom: 1px solid rgb(100, 106, 112) ;
+    color: rgb(100, 106, 112) !important;
 }
 
 @media (min-width: 40em) {

@@ -71,81 +71,232 @@
         </div>
     </nav>
 
-    <div class="container mt-5 mb-5">
+    <div class="container mt-3 mb-5">
         <div class="row g-4">
-            <div class="row featurette mt-5" data-aos="zoom-in">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading fw-bold lh-1">
-                        <h2 class="text-brand">TREINOS</h2>
+            <div class="featurette" data-aos="zoom-in">
+                <h2 class="display-3 font-impact text-center mb-3">
+                    Horários 23/24
+                </h2>
 
-                    </h2>
-                    <p class="mt-5 lead">
-                        Sub-8, Sub-10, Sub-12, Sub-14
-                        (dos 5 aos 13 anos)
-                        terças e sextas
-                        das 18h45 às 19h45
-                        no Arsenal 72 - <a class="link" href="https://goo.gl/maps/Jf9vFQjycpvKswoZ6">Localização
-                            aqui</a>
-                    </p>
-                    <p class="mt-5 lead">
-                        Sub-16, Sub-18, Seniores Masculinos e Seniores Femininos
-                        (dos 14 para cima)
-                        segundas e quartas
-                        das 20h30 às 22h00
-                        nas Mercês - <a class="link" href="https://goo.gl/maps/5BXwvHxgh2hLaQHM6">Localização aqui</a>
-                    </p>
-
+                <ul class="nav nav-pills mb-5 btn-brand p-2 justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link train-link active" id="pills-sen-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-sen" type="button" role="tab" aria-controls="pills-sen"
+                            aria-selected="true">Sen</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link train-link" id="pills-fem-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-fem" type="button" role="tab" aria-controls="pills-fem"
+                            aria-selected="false">Fem</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link train-link" id="pills-sub18-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-sub18" type="button" role="tab" aria-controls="pills-sub18"
+                            aria-selected="false">Sub-18</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link train-link" id="pills-sub16-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-sub16" type="button" role="tab" aria-controls="pills-sub16"
+                            aria-selected="false">Sub-16</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link train-link" id="pills-sub14-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-sub14" type="button" role="tab" aria-controls="pills-sub14"
+                            aria-selected="false">Sub-14</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link train-link" id="pills-sub12-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-sub12" type="button" role="tab" aria-controls="pills-sub12"
+                            aria-selected="false">Sub-12</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link train-link" id="pills-sub10-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-sub10" type="button" role="tab" aria-controls="pills-sub10"
+                            aria-selected="false">Sub-10</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link train-link" id="pills-sub8-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-sub8" type="button" role="tab" aria-controls="pills-sub8"
+                            aria-selected="false">Sub-8</button>
+                    </li>
+                </ul>
+                <div class="tab-content mx-4" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-sen" role="tabpanel"
+                        aria-labelledby="pills-sen-tab">
+                        <ul class="list-unstyled row justify-content-center gap-3">
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Segunda-Feira
+                                <h5 class="font-impact">20h30 - 22h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                </a>
+                            </li>
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Quarta-Feira
+                                <h5 class="font-impact">20h30 - 22h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                </a>
+                            </li>
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Sexta-Feira
+                                <h5 class="font-impact">20h30 - 22h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/hMAxxsAyaKtbALfJA" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Largo Palácio de Queluz 1
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="pills-fem" role="tabpanel" aria-labelledby="pills-fem-tab">
+                        <ul class="list-unstyled row justify-content-center gap-3">
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Segunda-Feira
+                                <h5 class="font-impact">20h30 - 22h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                </a>
+                            </li>
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Quarta-Feira
+                                <h5 class="font-impact">20h30 - 22h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="pills-sub18" role="tabpanel" aria-labelledby="pills-sub18-tab">
+                        <ul class="list-unstyled row justify-content-center gap-3">
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Segunda-Feira
+                                <h5 class="font-impact">20h30 - 22h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                </a>
+                            </li>
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Quarta-Feira
+                                <h5 class="font-impact">20h30 - 22h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="pills-sub16" role="tabpanel" aria-labelledby="pills-sub16-tab">
+                        <ul class="list-unstyled row justify-content-center gap-3">
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Segunda-Feira
+                                <h5 class="font-impact">20h30 - 22h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                </a>
+                            </li>
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Quarta-Feira
+                                <h5 class="font-impact">20h30 - 22h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="pills-sub14" role="tabpanel" aria-labelledby="pills-sub14-tab">
+                        <ul class="list-unstyled row justify-content-center gap-3">
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Terça-Feira
+                                <h5 class="font-impact">18h45 - 19h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                </a>
+                            </li>
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Sexta-Feira
+                                <h5 class="font-impact">18h45 - 19h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="pills-sub12" role="tabpanel" aria-labelledby="pills-sub12-tab">
+                        <ul class="list-unstyled row justify-content-center gap-3">
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Terça-Feira
+                                <h5 class="font-impact">18h45 - 19h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                </a>
+                            </li>
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Sexta-Feira
+                                <h5 class="font-impact">18h45 - 19h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="pills-sub10" role="tabpanel" aria-labelledby="pills-sub10-tab">
+                        <ul class="list-unstyled row justify-content-center gap-3">
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Terça-Feira
+                                <h5 class="font-impact">18h45 - 19h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                </a>
+                            </li>
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Sexta-Feira
+                                <h5 class="font-impact">18h45 - 19h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="pills-sub8" role="tabpanel" aria-labelledby="pills-sub8-tab">
+                        <ul class="list-unstyled row justify-content-center gap-3">
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Terça-Feira
+                                <h5 class="font-impact">18h45 - 19h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                </a>
+                            </li>
+                            <li class="col-md-3 train border rounded p-2 px-3">
+                                Sexta-Feira
+                                <h5 class="font-impact">18h45 - 19h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-md-5">
-                    <img src="resources/images/Foto 30.jpg" class="img-fluid" width="500" height="500" />
+                <div class="text-center">
+                    <img class="img-fluid shadow-lg rounded" src="resources/images/training.jpg" width="1000px"
+                        alt="Ubuntu Rugby Training" />
                 </div>
-            </div>
-
-            <hr class="mt-5" />
-
-            <h2 class="text-center mb-4 text-brand">FORMAÇÃO</h2>
-
-            <div class="col-12 col-lg-6" data-aos="zoom-in">
-                <img class="img-fluid" src="resources/images/Foto 26.jpg" />
-            </div>
-            <div class="col-12 col-lg-6" data-aos="zoom-in">
-                <img class="img-fluid" src="resources/images/Foto 27.jpg" />
-            </div>
-            <div class="col-12 col-lg-6" data-aos="zoom-in">
-                <img class="img-fluid" src="resources/images/Foto 28.jpg" />
-            </div>
-            <div class="col-12 col-lg-6" data-aos="zoom-in">
-                <img class="img-fluid" src="resources/images/Foto 29.jpg" />
-            </div>
-
-            <hr class="mt-5" />
-
-            <h2 class="text-center mb-4 text-brand">PRÉ-COMPETIÇÃO</h2>
-
-            <hr class="mt-5" />
-
-            <h2 class="text-center mb-4 text-brand">COMPETIÇÃO</h2>
-
-            <div class="col-12 col-lg-6" data-aos="zoom-in">
-                <img class="img-fluid" src="resources/images/Foto 40.jpg" />
-            </div>
-            <div class="col-12 col-lg-6" data-aos="zoom-in">
-                <img class="img-fluid" src="resources/images/Foto 41.jpg" />
-            </div>
-            <div class="col-12 col-lg-6" data-aos="zoom-in">
-                <img class="img-fluid" src="resources/images/Foto 42.jpg" />
-            </div>
-            <div class="col-12 col-lg-6" data-aos="zoom-in">
-                <img class="img-fluid" src="resources/images/Foto 43.jpg" />
-            </div>
-            <div class="col-12 col-lg-6" data-aos="zoom-in">
-                <img class="img-fluid" src="resources/images/Foto 44.jpg" />
-            </div>
-            <div class="col-12 col-lg-6" data-aos="zoom-in">
-                <img class="img-fluid" src="resources/images/Foto 45.jpg" />
             </div>
         </div>
-
     </div>
 
     <div class="footer bg-scnd px-5 pt-5 mt-5">
