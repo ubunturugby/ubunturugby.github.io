@@ -205,8 +205,18 @@ a:hover>div {
     border-radius: 8px;
 }
 
-.numbers {
+.numbers1 {
     background-image: url("../../resources/images/bg-orange.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.numbers2 {
+    background-image: url("../../resources/images/bg-school.jpg");
     background-repeat: no-repeat;
     object-fit: cover;
     background-size: cover;
@@ -230,8 +240,12 @@ a:hover>div {
     content: counter(num);
 }
 
-.to-9 {
-    animation: counter-9 3s ease-in-out forwards;
+.to-10 {
+    animation: counter-10 3s ease-in-out forwards;
+}
+
+.to-60 {
+    animation: counter-60 3s ease-in-out forwards;
 }
 
 .to-200 {
@@ -242,13 +256,27 @@ a:hover>div {
     animation: counter-400 3s ease-in-out forwards;
 }
 
-@keyframes counter-9 {
+.to-1300 {
+    animation: counter-1300 3s ease-in-out forwards;
+}
+
+@keyframes counter-10 {
     from {
         --num: 0;
     }
 
     to {
-        --num: 9;
+        --num: 10;
+    }
+}
+
+@keyframes counter-60 {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 60;
     }
 }
 
@@ -272,6 +300,16 @@ a:hover>div {
     }
 }
 
+@keyframes counter-1300 {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 1300;
+    }
+}
+
 .vr {
     width: 3px;
     height: 100px;
@@ -281,6 +319,11 @@ a:hover>div {
 .sponsor {
     width: 150px;
     margin-top: 20px;
+    transition: all 0.2s ease;
+}
+
+.sponsor:hover {
+    transform: scale(1.1);
 }
 
 .text-justify {
