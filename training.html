@@ -6,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Academia Ubuntu Rugby - A formar jovens, dentro e fora de campo desde 2013."
-    />
+    <meta name="description" content="Academia Ubuntu Rugby - A formar jovens, dentro e fora de campo desde 2013." />
     <title>Ubuntu Rugby • Treinos</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico" />
@@ -72,9 +69,8 @@
                     </ul>
                 </div>
                 <div class="registration">
-                    <a class="btn btn-dark btn-brand"
-                        href='https://forms.gle/ctQpSjTfFam2us2f8'
-                        target="_blank" rel="noopener noreferrer">
+                    <a class="btn btn-dark btn-brand" href='https://forms.gle/ctQpSjTfFam2us2f8' target="_blank"
+                        rel="noopener noreferrer">
                         INSCRIÇÃO
                     </a>
                 </div>
@@ -82,12 +78,34 @@
         </div>
     </nav>
 
-    <div class="container mt-3 mb-5">
+    <div class="container mt-3 mt-5">
         <div class="row g-4">
             <div class="featurette" data-aos="zoom-in">
-                <h2 class="display-3 font-impact text-center mb-3">
-                    Horários 23/24
+                <h2 class="display-3 font-impact text-center">
+                    Horários 24/25
                 </h2>
+
+                <div style="text-align: center; padding-bottom: 40px;">
+                    <button class="calendar"
+                        onclick="window.open('https://calendar.google.com/calendar/u/4?cid=YXVyLnVidW50dS5kb2NzQGdtYWlsLmNvbQ', '_blank')"
+                        style="
+                            padding: 8px 10px;
+                            font-size: 16px;
+                            font-weight: bold;
+                            background-color: #6ca1f6;
+                            color: white;
+                            border: none;
+                            border-radius: 30px;
+                            cursor: pointer;
+                            display: inline-flex;
+                            align-items: center;
+                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                            transition: all 0.3s ease;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"
+                            alt="Google Calendar Logo" style="width: 20px; height: 20px; margin-right: 8px;">
+                        Calendário
+                    </button>
+                </div>
 
                 <ul class="nav nav-pills mb-4 btn-brand p-2 justify-content-center" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -101,14 +119,24 @@
                             aria-selected="false">Sen F</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link train-link" id="pills-sub18-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-sub18" type="button" role="tab" aria-controls="pills-sub18"
-                            aria-selected="false">Sub-18</button>
+                        <button class="nav-link train-link" id="pills-sub19M-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-sub19M" type="button" role="tab" aria-controls="pills-sub19M"
+                            aria-selected="false">Sub-19 M</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link train-link" id="pills-sub16-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-sub16" type="button" role="tab" aria-controls="pills-sub16"
-                            aria-selected="false">Sub-16</button>
+                        <button class="nav-link train-link" id="pills-sub18F-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-sub18F" type="button" role="tab" aria-controls="pills-sub18F"
+                            aria-selected="false">Sub-18 F</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link train-link" id="pills-sub16M-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-sub16M" type="button" role="tab" aria-controls="pills-sub16M"
+                            aria-selected="false">Sub-16 M</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link train-link" id="pills-sub16F-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-sub16F" type="button" role="tab" aria-controls="pills-sub16F"
+                            aria-selected="false">Sub-16 F</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link train-link" id="pills-sub14-tab" data-bs-toggle="pill"
@@ -140,180 +168,220 @@
                     <div class="tab-pane fade show active" id="pills-senM" role="tabpanel"
                         aria-labelledby="pills-senM-tab">
                         <ul class="list-unstyled row justify-content-center gap-3">
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Segunda-Feira
-                                <h5 class="font-impact">20h30 - 22h00</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Terça-Feira
+                                <h5 class="font-impact">20h00 - 22h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Quarta-Feira
-                                <h5 class="font-impact">20h30 - 22h00</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Quinta-Feira
+                                <h5 class="font-impact">20h00 - 22h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="pills-senF" role="tabpanel" aria-labelledby="pills-senF-tab">
                         <ul class="list-unstyled row justify-content-center gap-3">
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Segunda-Feira
-                                <h5 class="font-impact">20h30 - 22h00</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Quarta-Feira
+                                <h5 class="font-impact">19h45 - 21h30</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Quarta-Feira
-                                <h5 class="font-impact">20h30 - 22h00</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Sexta-Feira
+                                <h5 class="font-impact">19h45 - 21h30</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-pane fade" id="pills-sub18" role="tabpanel" aria-labelledby="pills-sub18-tab">
+                    <div class="tab-pane fade" id="pills-sub19M" role="tabpanel" aria-labelledby="pills-sub19M-tab">
                         <ul class="list-unstyled row justify-content-center gap-3">
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Segunda-Feira
-                                <h5 class="font-impact">20h30 - 22h00</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Terça-Feira
+                                <h5 class="font-impact">19h15 - 20h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Quarta-Feira
-                                <h5 class="font-impact">20h30 - 22h00</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Quinta-Feira
+                                <h5 class="font-impact">19h15 - 20h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-pane fade" id="pills-sub16" role="tabpanel" aria-labelledby="pills-sub16-tab">
+                    <div class="tab-pane fade" id="pills-sub18F" role="tabpanel" aria-labelledby="pills-sub18F-tab">
                         <ul class="list-unstyled row justify-content-center gap-3">
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Segunda-Feira
-                                <h5 class="font-impact">20h30 - 22h00</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Quarta-Feira
+                                <h5 class="font-impact">19h45 - 21h30</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Quarta-Feira
-                                <h5 class="font-impact">20h30 - 22h00</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/GMmSSdjQXmDMFBL57" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Sexta-Feira
+                                <h5 class="font-impact">19h45 - 21h30</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>União Recreativa das Mercês
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="pills-sub16M" role="tabpanel" aria-labelledby="pills-sub16M-tab">
+                        <ul class="list-unstyled row justify-content-center gap-3">
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Terça-Feira
+                                <h5 class="font-impact">19h15 - 20h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
+                                </a>
+                            </li>
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Quinta-Feira
+                                <h5 class="font-impact">19h15 - 20h45</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="pills-sub16F" role="tabpanel" aria-labelledby="pills-sub16F-tab">
+                        <ul class="list-unstyled row justify-content-center gap-3">
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Quarta-Feira
+                                <h5 class="font-impact">19h45 - 21h30</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
+                                </a>
+                            </li>
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Sexta-Feira
+                                <h5 class="font-impact">19h45 - 21h30</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="pills-sub14" role="tabpanel" aria-labelledby="pills-sub14-tab">
                         <ul class="list-unstyled row justify-content-center gap-3">
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Terça-Feira
-                                <h5 class="font-impact">18h45 - 19h45</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Segunda-Feira
+                                <h5 class="font-impact">19h00 - 20h30</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Sexta-Feira
-                                <h5 class="font-impact">18h45 - 19h45</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Quarta-Feira
+                                <h5 class="font-impact">19h00 - 20h30</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="pills-sub12" role="tabpanel" aria-labelledby="pills-sub12-tab">
                         <ul class="list-unstyled row justify-content-center gap-3">
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Terça-Feira
-                                <h5 class="font-impact">18h45 - 19h45</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Segunda-Feira
+                                <h5 class="font-impact">19h00 - 20h30</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Sexta-Feira
-                                <h5 class="font-impact">18h45 - 19h45</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Quarta-Feira
+                                <h5 class="font-impact">19h00 - 20h30</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="pills-sub10" role="tabpanel" aria-labelledby="pills-sub10-tab">
                         <ul class="list-unstyled row justify-content-center gap-3">
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Terça-Feira
-                                <h5 class="font-impact">18h45 - 19h45</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Segunda-Feira
+                                <h5 class="font-impact">19h00 - 20h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
-                            <li class="col-md-3 train border rounded p-2 px-3">
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
                                 Sexta-Feira
-                                <h5 class="font-impact">18h45 - 19h45</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                                <h5 class="font-impact">19h00 - 20h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="pills-sub8" role="tabpanel" aria-labelledby="pills-sub8-tab">
                         <ul class="list-unstyled row justify-content-center gap-3">
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Terça-Feira
-                                <h5 class="font-impact">18h45 - 19h45</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Segunda-Feira
+                                <h5 class="font-impact">19h00 - 20h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
-                            <li class="col-md-3 train border rounded p-2 px-3">
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
                                 Sexta-Feira
-                                <h5 class="font-impact">18h45 - 19h45</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                                <h5 class="font-impact">19h00 - 20h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="pills-sub6" role="tabpanel" aria-labelledby="pills-sub6-tab">
                         <ul class="list-unstyled row justify-content-center gap-3">
-                            <li class="col-md-3 train border rounded p-2 px-3">
-                                Terça-Feira
-                                <h5 class="font-impact">18h45 - 19h45</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                                Segunda-Feira
+                                <h5 class="font-impact">19h00 - 20h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
-                            <li class="col-md-3 train border rounded p-2 px-3">
+                            <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
                                 Sexta-Feira
-                                <h5 class="font-impact">18h45 - 19h45</h5>
-                                <a class="text-muted" href="https://maps.app.goo.gl/tp9QkK4oC9Em4Nu9A" target="_blank"
+                                <h5 class="font-impact">19h00 - 20h00</h5>
+                                <a class="text-muted" href="https://maps.app.goo.gl/Knxp9eBdd1BZnCyv7" target="_blank"
                                     rel="noopener noreferrer">
-                                    <i class="bi bi-geo-alt text-muted me-1"></i>Arsenal 72
+                                    <i class="bi bi-geo-alt text-muted me-1"></i>Escola Secundária de Mem Martins
                                 </a>
                             </li>
                         </ul>
@@ -341,9 +409,8 @@
                             <a href="index.html" class="link-light">Início</a>
                         </li>
                         <li class="mb-2">
-                            <a class="link-light"
-                                href='https://forms.gle/ctQpSjTfFam2us2f8'
-                                target="_blank" rel="noopener noreferrer">
+                            <a class="link-light" href='https://forms.gle/ctQpSjTfFam2us2f8' target="_blank"
+                                rel="noopener noreferrer">
                                 Inscrições
                             </a>
                         </li>

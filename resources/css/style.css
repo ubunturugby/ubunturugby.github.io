@@ -379,6 +379,12 @@ a:hover>div {
     background-size: contain;
 }
 
+.calendar:hover {
+    background-color: #357AE8;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
 @media (min-width: 40em) {
 
     /* Bump up size of carousel content */
