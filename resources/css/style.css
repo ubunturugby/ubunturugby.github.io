@@ -403,6 +403,20 @@ a:hover>div {
     transition: all 0.3s ease;
 }
 
+.disabled {
+    cursor: not-allowed;
+}
+
+.page-link {
+    text-decoration: none;
+}
+
+.page-item.active .page-link {
+    background-color: #ff6600;
+    border-color: #ff6600;
+}
+
+
 @media (min-width: 40em) {
 
     /* Bump up size of carousel content */
@@ -432,6 +446,19 @@ a:hover>div {
 @media (max-width: 667px) {
     .nav {
         --bs-nav-link-padding-x: 0.5rem;
+    }
+
+    .pagination .page-link {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .pagination .page-item {
+        margin-bottom: 10px;
     }
 }
 

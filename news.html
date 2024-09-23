@@ -69,9 +69,8 @@
                     </ul>
                 </div>
                 <div class="registration">
-                    <a class="btn btn-dark btn-brand"
-                        href='https://forms.gle/ctQpSjTfFam2us2f8'
-                        target="_blank" rel="noopener noreferrer">
+                    <a class="btn btn-dark btn-brand" href='https://forms.gle/ctQpSjTfFam2us2f8' target="_blank"
+                        rel="noopener noreferrer">
                         INSCRIÇÃO
                     </a>
                 </div>
@@ -79,11 +78,16 @@
         </div>
     </nav>
 
-    <div class="d-flex align-items-center justify-content-center">
-        <div class="container margin-mobile">
+    <div class="d-flex align-items-center justify-content-center mt-5">
+        <div class="container margin-mobile" id="news-section">
             <div class="row" id="news-container">
-                <!-- News items will be generated here -->
-            </div>
+                <!-- News items will be dynamically loaded here -->
+              </div>
+            
+              <!-- Pagination controls -->
+              <div class="d-flex justify-content-center my-3" id="pagination">
+                <!-- Pagination buttons will be dynamically loaded here -->
+              </div>
         </div>
     </div>
 
@@ -101,9 +105,8 @@
                             <a href="index.html" class="link-light">Início</a>
                         </li>
                         <li class="mb-2">
-                            <a class="link-light"
-                                href='https://forms.gle/ctQpSjTfFam2us2f8'
-                                target="_blank" rel="noopener noreferrer">
+                            <a class="link-light" href='https://forms.gle/ctQpSjTfFam2us2f8' target="_blank"
+                                rel="noopener noreferrer">
                                 Inscrições
                             </a>
                         </li>
@@ -142,60 +145,171 @@
 
     <script type="module">
         import { newsItems } from './resources/newsData.js';
-    
-        // Function to generate the news items dynamically
-        function generateNews() {
-            const newsContainer = document.getElementById('news-container');
-            newsItems.forEach(item => {
-                const idx = item.id;
-                let carouselIndicators = '', carouselItems = '';
-                const titleWithoutSpaces = idx + 500;
-                if (item.images > 1) {
-                    for (let i = 0; i < item.images; i++) {
-                        const isActive = i === 0 ? 'active' : '';
-                        carouselIndicators += `
-                            <button type="button" data-bs-target="#carouselExampleCaptions${titleWithoutSpaces}" data-bs-slide-to="${i}" class="${isActive}" ${i === 0 ? 'aria-current="true"' : ''} aria-label="Slide ${i + 1}"></button>
-                        `;
-                        carouselItems += `
-                            <div class="carousel-item ${isActive}">
-                                <div class="d-flex justify-content-center">
-                                    <img src="resources/images/news/not${idx}-${i + 1}.jpg" class="img-fluid" width="300" alt="${idx}-${i + 1}">
-                                </div>
-                            </div>
-                        `;
-                    };
-                }
-    
-                const newsHTML = `
-                    <div class="col-md-4 my-5" data-aos="zoom-in">
-                        <h5 class="text-uppercase text-center font-impact">${item.title}</h5>
-                        <div>
-                            <div class="carousel-inner mb-3">
-                                ${item.images > 1 ? `
-                                <div id="carouselExampleCaptions${titleWithoutSpaces}" class="carousel slide" data-bs-ride="false">
-                                    <div class="carousel-indicators">${carouselIndicators}</div>
-                                    <div class="carousel-inner">${carouselItems}</div>
-                                </div>
-                                ` : `
-                                <div class="d-flex justify-content-center">
-                                    <img src="resources/images/news/not${idx}-1.jpg" class="img-fluid" width="300" alt="${idx}-1">
-                                </div>`}
-                            </div>
-                        </div>
-                        <div class="text-justify news-text">
-                            <small class="text-muted">${item.date}</small><br>
-                            <small>${item.description}</small>
-                        </div>
-                    </div>
+      
+        const itemsPerPage = 3; // Number of news items per page
+        let currentPage = 1;
+      
+        // Function to render news items for the current page
+        function renderNewsItems(page) {
+          const startIndex = (page - 1) * itemsPerPage;
+          const endIndex = startIndex + itemsPerPage;
+      
+          const newsContainer = document.getElementById("news-container");
+          newsContainer.innerHTML = ""; // Clear the container
+      
+          const paginatedItems = newsItems.slice(startIndex, endIndex);
+          paginatedItems.forEach((item) => {
+            const idx = item.id;
+            let carouselIndicators = '', carouselItems = '';
+            const titleWithoutSpaces = idx + 500;
+            if (item.images > 1) {
+              for (let i = 0; i < item.images; i++) {
+                const isActive = i === 0 ? 'active' : '';
+                carouselIndicators += `
+                  <button type="button" data-bs-target="#carouselExampleCaptions${titleWithoutSpaces}" data-bs-slide-to="${i}" class="${isActive}" ${i === 0 ? 'aria-current="true"' : ''} aria-label="Slide ${i + 1}"></button>
                 `;
-                newsContainer.insertAdjacentHTML('beforeend', newsHTML);
-            });
+                carouselItems += `
+                  <div class="carousel-item ${isActive}">
+                    <div class="d-flex justify-content-center">
+                      <img src="resources/images/news/not${idx}-${i + 1}.jpg" class="img-fluid" width="300" alt="${idx}-${i + 1}">
+                    </div>
+                  </div>
+                `;
+              }
+            }
+      
+            // HTML for news item card
+            const newsHTML = `
+              <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+                <h5 class="text-uppercase text-center font-impact">${item.title}</h5>
+                <div>
+                  <div class="carousel-inner mb-3">
+                    ${item.images > 1 ? `
+                    <div id="carouselExampleCaptions${titleWithoutSpaces}" class="carousel slide" data-bs-ride="false">
+                      <div class="carousel-indicators">${carouselIndicators}</div>
+                      <div class="carousel-inner">${carouselItems}</div>
+                    </div>
+                    ` : `
+                    <div class="d-flex justify-content-center">
+                      <img src="resources/images/news/not${idx}-1.jpg" class="img-fluid" width="300" alt="${idx}-1}">
+                    </div>`}
+                  </div>
+                </div>
+                <div class="text-justify news-text">
+                  <small class="text-muted">${item.date}</small><br>
+                  <small>${item.description}</small>
+                </div>
+              </div>
+            `;
+            newsContainer.innerHTML += newsHTML;
+          });
         }
-    
-        // Initialize news generation on DOMContentLoaded
-        document.addEventListener('DOMContentLoaded', generateNews);
-    </script>
-
+      
+        // Function to render pagination controls with mobile-friendly optimization
+        function renderPagination() {
+          const paginationContainer = document.getElementById("pagination");
+          paginationContainer.innerHTML = ""; // Clear pagination
+      
+          const totalPages = Math.ceil(newsItems.length / itemsPerPage);
+      
+          // Create the pagination component using Bootstrap
+          const paginationList = document.createElement("ul");
+          paginationList.className = "pagination justify-content-center flex-wrap";
+      
+          // Previous button
+          const prevButton = document.createElement("li");
+          prevButton.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
+          prevButton.innerHTML = `<a class="page-link text-dark" href="#"><</a>`;
+          prevButton.addEventListener("click", () => {
+            if (currentPage > 1) {
+              currentPage--;
+              updatePage();
+            }
+          });
+          paginationList.appendChild(prevButton);
+      
+          // Dynamic page buttons: Show limited buttons on small screens, and use "..." when necessary
+          const maxVisibleButtons = window.innerWidth < 576 ? 3 : 5; // Show 3 buttons on mobile, 5 on larger screens
+          const startPage = Math.max(1, currentPage - Math.floor(maxVisibleButtons / 2));
+          const endPage = Math.min(totalPages, startPage + maxVisibleButtons - 1);
+      
+          if (startPage > 1) {
+            const firstPageButton = document.createElement("li");
+            firstPageButton.className = `page-item ${1 === currentPage ? 'active' : ''}`;
+            firstPageButton.innerHTML = `<a class="page-link text-dark" href="#">1</a>`;
+            firstPageButton.addEventListener("click", () => {
+              currentPage = 1;
+              updatePage();
+            });
+            paginationList.appendChild(firstPageButton);
+      
+            if (startPage > 2) {
+              const ellipsis = document.createElement("li");
+              ellipsis.className = "page-item disabled";
+              ellipsis.innerHTML = `<span class="page-link text-dark">...</span>`;
+              paginationList.appendChild(ellipsis);
+            }
+          }
+      
+          for (let i = startPage; i <= endPage; i++) {
+            const pageButton = document.createElement("li");
+            pageButton.className = `page-item ${i === currentPage ? 'active' : ''}`;
+            pageButton.innerHTML = `<a class="page-link text-dark" href="#">${i}</a>`;
+            pageButton.addEventListener("click", () => {
+              currentPage = i;
+              updatePage();
+            });
+            paginationList.appendChild(pageButton);
+          }
+      
+          if (endPage < totalPages) {
+            if (endPage < totalPages - 1) {
+              const ellipsis = document.createElement("li");
+              ellipsis.className = "page-item disabled";
+              ellipsis.innerHTML = `<span class="page-link text-dark">...</span>`;
+              paginationList.appendChild(ellipsis);
+            }
+      
+            const lastPageButton = document.createElement("li");
+            lastPageButton.className = `page-item ${totalPages === currentPage ? 'active' : ''}`;
+            lastPageButton.innerHTML = `<a class="page-link text-dark" href="#">${totalPages}</a>`;
+            lastPageButton.addEventListener("click", () => {
+              currentPage = totalPages;
+              updatePage();
+            });
+            paginationList.appendChild(lastPageButton);
+          }
+      
+          // Next button
+          const nextButton = document.createElement("li");
+          nextButton.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
+          nextButton.innerHTML = `<a class="page-link text-dark" href="#">></a>`;
+          nextButton.addEventListener("click", () => {
+            if (currentPage < totalPages) {
+              currentPage++;
+              updatePage();
+            }
+          });
+          paginationList.appendChild(nextButton);
+      
+          paginationContainer.appendChild(paginationList);
+        }
+      
+        // Update the page content and scroll to top of the news section
+        function updatePage() {
+          renderNewsItems(currentPage);
+          renderPagination();
+          // Scroll to top of news section
+          const newsSection = document.getElementById("news-section");
+          newsSection.scrollIntoView({ behavior: "smooth" });
+        }
+      
+        // Initialize the first page
+        document.addEventListener("DOMContentLoaded", () => {
+          updatePage();
+        });
+      </script>
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
