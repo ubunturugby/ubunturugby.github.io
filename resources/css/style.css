@@ -339,8 +339,11 @@ a:hover>div {
 }
 
 .text-muted:hover {
-    border-bottom: 1px solid rgb(100, 106, 112);
     color: rgb(100, 106, 112) !important;
+}
+
+.underline-hover:hover {
+    border-bottom: 1px solid rgb(100, 106, 112);
 }
 
 .lightbox {
@@ -383,6 +386,21 @@ a:hover>div {
     background-color: #357AE8;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
+}
+
+.calendar {
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #6ca1f6;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 @media (min-width: 40em) {
