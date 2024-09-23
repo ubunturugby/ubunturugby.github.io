@@ -300,8 +300,10 @@
           renderNewsItems(currentPage);
           renderPagination();
           // Scroll to top of news section
-          const newsSection = document.getElementById("news-section");
-          newsSection.scrollIntoView({ behavior: "smooth" });
+            if (currentPage !== 1) {
+            const newsSection = document.getElementById("news-section");
+            newsSection.scrollIntoView({ behavior: "smooth" });
+            }
         }
       
         // Initialize the first page
