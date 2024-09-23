@@ -85,7 +85,7 @@
                     Horários 24/25
                 </h2>
 
-                <div style="text-align: center; padding-bottom: 40px;">
+                <div style="text-align: center; padding-bottom: 60px;">
                     <button class="calendar"
                         onclick="window.open('https://calendar.google.com/calendar/u/4?cid=YXVyLnVidW50dS5kb2NzQGdtYWlsLmNvbQ', '_blank')"
                         style="
@@ -110,6 +110,14 @@
 
                 <div class="col-12">
 
+                    <div class="text-center my-4">
+                        <div class="btn-group" role="group" aria-label="Select Location">
+                            <button type="button" class="active location-btn" id="memMartinsBtn">Mem Martins</button>
+                            <button type="button" class="btn-outline-primary location-btn" id="miraSintraBtn">Mira Sintra</button>
+                        </div>
+                    </div>
+
+
                     <ul class="nav nav-pills mb-4 btn-brand p-2 justify-content-center" id="team-tabs" role="tablist">
                         <!-- Dynamic tabs will be inserted here -->
                     </ul>
@@ -117,11 +125,6 @@
                     <div class="tab-content mx-4" id="team-schedules">
                         <!-- Dynamic content for schedules will be inserted here -->
                     </div>
-                </div>
-
-                <div class="text-center mt-5">
-                    <img class="img-fluid shadow-lg rounded" src="resources/images/training.jpg" width="800px"
-                        alt="Ubuntu Rugby Training" />
                 </div>
             </div>
         </div>
@@ -181,17 +184,22 @@
 
     <script>
         const teams = [
-            { id: 'senM', name: 'Sen M', days: ['Terça-Feira', 'Quinta-Feira'], times: ['20h00 - 22h00', '20h00 - 22h00'], coach: 'Filipe Pereira' },
-            { id: 'senF', name: 'Sen F', days: ['Quarta-Feira', 'Sexta-Feira'], times: ['19h45 - 21h30', '19h45 - 21h30'], coach: 'André Pinto' },
-            { id: 'sub19M', name: 'Sub-19 M', days: ['Terça-Feira', 'Quinta-Feira'], times: ['19h15 - 20h45', '19h15 - 20h45'], coach: 'Tiago Antunes e Janela' },
-            { id: 'sub18F', name: 'Sub-18 F', days: ['Quarta-Feira', 'Sexta-Feira'], times: ['19h45 - 21h30', '19h45 - 21h30'], coach: 'André Pinto' },
-            { id: 'sub16M', name: 'Sub-16 M', days: ['Terça-Feira', 'Quinta-Feira'], times: ['19h15 - 20h45', '19h15 - 20h45'], coach: 'Tiago Antunes e Janela' },
-            { id: 'sub16F', name: 'Sub-16 F', days: ['Quarta-Feira', 'Sexta-Feira'], times: ['19h45 - 21h30', '19h45 - 21h30'], coach: 'André Pinto' },
-            { id: 'sub14', name: 'Sub-14', days: ['Segunda-Feira', 'Quarta-Feira'], times: ['19h00 - 20h30', '19h00 - 20h30'], coach: 'Yara Fonseca e Ricardo Fernandes' },
-            { id: 'sub12', name: 'Sub-12', days: ['Segunda-Feira', 'Quarta-Feira'], times: ['19h00 - 20h30', '19h00 - 20h30'], coach: 'Beatriz Menezes e Pedro Reis' },
-            { id: 'sen10', name: 'Sub-10', days: ['Segunda-Feira', 'Sexta-Feira'], times: ['19h00 - 20h00', '19h00 - 20h00'], coach: 'Martin Marques e Nuno Tomás' },
-            { id: 'sen6-8', name: 'Sub-6/8', days: ['Segunda-Feira', 'Sexta-Feira'], times: ['19h00 - 20h00', '19h00 - 20h00'], coach: 'Ana Sofia e Kauãnn Miranda' },
-            { id: 'mira-sintra', name: 'Escolinha Mira Sintra', days: ['Terça-Feira', 'Quinta-Feira'], times: ['19h00 - 20h15', '19h00 - 20h15'], coach: 'André Pinto e Diogo Pires' }
+            { id: 'senM', name: 'Sen M', location: 'mem-martins', days: ['Terça-Feira', 'Quinta-Feira'], times: ['20h00 - 22h00', '20h00 - 22h00'], coach: 'Filipe Pereira' },
+            { id: 'senF', name: 'Sen F', location: 'mem-martins', days: ['Quarta-Feira', 'Sexta-Feira'], times: ['19h45 - 21h30', '19h45 - 21h30'], coach: 'André Pinto' },
+            { id: 'sub19M', name: 'Sub-19 M', location: 'mem-martins', days: ['Terça-Feira', 'Quinta-Feira'], times: ['19h15 - 20h45', '19h15 - 20h45'], coach: 'Tiago Antunes e Janela' },
+            { id: 'sub18F', name: 'Sub-18 F', location: 'mem-martins', days: ['Quarta-Feira', 'Sexta-Feira'], times: ['19h45 - 21h30', '19h45 - 21h30'], coach: 'André Pinto' },
+            { id: 'sub16M', name: 'Sub-16 M', location: 'mem-martins', days: ['Terça-Feira', 'Quinta-Feira'], times: ['19h15 - 20h45', '19h15 - 20h45'], coach: 'Tiago Antunes e Janela' },
+            { id: 'sub16F', name: 'Sub-16 F', location: 'mem-martins', days: ['Quarta-Feira', 'Sexta-Feira'], times: ['19h45 - 21h30', '19h45 - 21h30'], coach: 'André Pinto' },
+            { id: 'sub14', name: 'Sub-14', location: 'mem-martins', days: ['Segunda-Feira', 'Quarta-Feira'], times: ['19h00 - 20h30', '19h00 - 20h30'], coach: 'Yara Fonseca e Ricardo Fernandes' },
+            { id: 'sub12', name: 'Sub-12', location: 'mem-martins', days: ['Segunda-Feira', 'Quarta-Feira'], times: ['19h00 - 20h30', '19h00 - 20h30'], coach: 'Beatriz Menezes e Pedro Reis' },
+            { id: 'sen10', name: 'Sub-10', location: 'mem-martins', days: ['Segunda-Feira', 'Sexta-Feira'], times: ['19h00 - 20h00', '19h00 - 20h00'], coach: 'Martin Marques e Nuno Tomás' },
+            { id: 'sen6-8', name: 'Sub-6/8', location: 'mem-martins', days: ['Segunda-Feira', 'Sexta-Feira'], times: ['19h00 - 20h00', '19h00 - 20h00'], coach: 'Ana Sofia e Kauãnn Miranda' },
+            { id: 'sub-14-ms', name: 'Sub-14', location: 'mira-sintra', days: ['Terça-Feira', 'Quinta-Feira'], times: ['19h00 - 20h15', '19h00 - 20h15'], coach: 'André Pinto e Diogo Pires' },
+            { id: 'sub-12-ms', name: 'Sub-12', location: 'mira-sintra', days: ['Terça-Feira', 'Quinta-Feira'], times: ['19h00 - 20h15', '19h00 - 20h15'], coach: 'André Pinto e Diogo Pires' },
+            { id: 'sub-10-ms', name: 'Sub-10', location: 'mira-sintra', days: ['Terça-Feira', 'Quinta-Feira'], times: ['19h00 - 20h15', '19h00 - 20h15'], coach: 'André Pinto e Diogo Pires' },
+            { id: 'sub-8-ms', name: 'Sub-8', location: 'mira-sintra', days: ['Terça-Feira', 'Quinta-Feira'], times: ['19h00 - 20h15', '19h00 - 20h15'], coach: 'André Pinto e Diogo Pires' },
+            { id: 'sub-6-ms', name: 'Sub-6', location: 'mira-sintra', days: ['Terça-Feira', 'Quinta-Feira'], times: ['19h00 - 20h15', '19h00 - 20h15'], coach: 'André Pinto e Diogo Pires' },
+            { id: 'sub-4-ms', name: 'Sub-4', location: 'mira-sintra', days: ['Terça-Feira', 'Quinta-Feira'], times: ['19h00 - 20h15', '19h00 - 20h15'], coach: 'André Pinto e Diogo Pires' },
         ];
 
         const localizations = [
@@ -203,20 +211,24 @@
                 name: 'Campo da Rua do Pinheiro',
                 link: 'https://maps.app.goo.gl/yJcaH5DLuygAyKq58'
             }
-        ]
+        ];
 
+
+        // Function to generate tabs
         // Function to generate tabs
         function generateTabs() {
             const teamTabs = document.getElementById('team-tabs');
+            teamTabs.innerHTML = ''; // Clear existing tabs
+
             teams.forEach((team, index) => {
                 const isActive = index === 0 ? 'active' : '';
                 const tab = `
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link train-link ${isActive}" id="pills-${team.id}-tab" data-bs-toggle="pill" data-bs-target="#pills-${team.id}" type="button" role="tab" aria-controls="pills-${team.id}" aria-selected="${index === 0}">
-                        ${team.name}
-                    </button>
-                </li>
-            `;
+            <li class="nav-item" role="presentation">
+                <button class="nav-link train-link ${isActive}" id="pills-${team.id}-tab" data-bs-toggle="pill" data-bs-target="#pills-${team.id}" type="button" role="tab" aria-controls="pills-${team.id}" aria-selected="${index === 0}">
+                    ${team.name}
+                </button>
+            </li>
+        `;
                 teamTabs.insertAdjacentHTML('beforeend', tab);
             });
         }
@@ -224,33 +236,35 @@
         // Function to generate schedules
         function generateSchedules() {
             const teamSchedules = document.getElementById('team-schedules');
+            teamSchedules.innerHTML = ''; // Clear existing schedules
+
             teams.forEach((team, index) => {
                 const isActive = index === 0 ? 'show active' : '';
                 let scheduleItems = '';
-                const localization = team.id === 'mira-sintra' ? localizations[1] : localizations[0];
+                const localization = team.location === 'mira-sintra' ? localizations[1] : localizations[0];
 
                 team.days.forEach((day, i) => {
                     scheduleItems += `
-                    <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
-                        ${day}
-                        <h5 class="font-impact">${team.times[i]}</h5>
-                        <div class="text-muted">
-                            <i class="bi bi-person text-muted me-1"></i>${team.coach}
-                        </div>
-                        <a class="text-muted underline-hover" href="${localization.link}" target="_blank">
-                            <i class="bi bi-geo-alt text-muted me-1"></i>${localization.name}
-                        </a>
-                    </li>
-                `;
+                <li class="col-md-3 train border rounded p-2 px-3 hover-maximize">
+                    ${day}
+                    <h5 class="font-impact">${team.times[i]}</h5>
+                    <div class="text-muted">
+                        <i class="bi bi-person text-muted me-1"></i>${team.coach}
+                    </div>
+                    <a class="text-muted underline-hover" href="${localization.link}" target="_blank">
+                        <i class="bi bi-geo-alt text-muted me-1"></i>${localization.name}
+                    </a>
+                </li>
+            `;
                 });
 
                 const schedule = `
-                <div class="tab-pane fade ${isActive}" id="pills-${team.id}" role="tabpanel" aria-labelledby="pills-${team.id}-tab">
-                    <ul class="list-unstyled row justify-content-center gap-3">
-                        ${scheduleItems}
-                    </ul>
-                </div>
-            `;
+            <div class="tab-pane fade ${isActive}" id="pills-${team.id}" role="tabpanel" aria-labelledby="pills-${team.id}-tab">
+                <ul class="list-unstyled row justify-content-center gap-3">
+                    ${scheduleItems}
+                </ul>
+            </div>
+        `;
                 teamSchedules.insertAdjacentHTML('beforeend', schedule);
             });
         }
@@ -259,7 +273,57 @@
         document.addEventListener('DOMContentLoaded', () => {
             generateTabs();
             generateSchedules();
+
+            const memMartinsBtn = document.getElementById('memMartinsBtn');
+            const miraSintraBtn = document.getElementById('miraSintraBtn');
+
+            // Set default location to Mem Martins on page load
+            filterTeams('mem-martins');
+
+            // Event listeners for buttons
+            memMartinsBtn.addEventListener('click', () => {
+                memMartinsBtn.classList.add('btn-primary', 'active');
+                memMartinsBtn.classList.remove('btn-outline-primary');
+                miraSintraBtn.classList.remove('btn-primary', 'active');
+                miraSintraBtn.classList.add('btn-outline-primary');
+                filterTeams('mem-martins');
+            });
+
+            miraSintraBtn.addEventListener('click', () => {
+                miraSintraBtn.classList.add('btn-primary', 'active');
+                miraSintraBtn.classList.remove('btn-outline-primary');
+                memMartinsBtn.classList.remove('btn-primary', 'active');
+                memMartinsBtn.classList.add('btn-outline-primary');
+                filterTeams('mira-sintra');
+            });
+
+            // Function to filter teams based on location
+            function filterTeams(selectedLocation) {
+                const allTabs = document.querySelectorAll('.nav-link.train-link');
+                let firstTabFound = false; // To set the first matching tab as active
+
+                teams.forEach((team, index) => {
+                    const scheduleTab = document.getElementById(`pills-${team.id}-tab`);
+                    const scheduleContent = document.getElementById(`pills-${team.id}`);
+                    const localization = team.location;
+
+                    if (selectedLocation === localization) {
+                        scheduleTab.parentElement.style.display = 'block';
+
+                        if (!firstTabFound) {
+                            scheduleTab.classList.add('active');
+                            scheduleContent.classList.add('show', 'active');
+                            firstTabFound = true; // Ensure only the first tab gets activated
+                        }
+                    } else {
+                        scheduleTab.parentElement.style.display = 'none';
+                        scheduleTab.classList.remove('active');
+                        scheduleContent.classList.remove('show', 'active');
+                    }
+                });
+            }
         });
+
     </script>
 
 
