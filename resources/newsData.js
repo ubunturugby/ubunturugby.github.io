@@ -1,6 +1,76 @@
 // Array to store the news items data
 const newsItems = [
     {
+        id: 51,
+        title: "Iniciação ao Rugby na Casa Seis",
+        date: "19/09/2024",
+        description: "A AUR realizou no pátio da Casa Seis uma sessão de sensibilização para crianças e jovens, um fim de tarde muito animado e divertido, com um excelente ambiente entre todos!",
+        images: 1
+    },
+    {
+        id: 50,
+        title: "Escolinha de Mira Sintra",
+        date: "17/09/2024",
+        description: "Iniciámos uma nova etapa, começámos um segundo polo de treinos em Mira Sintra, para os escalões entre sub6 e sub14!",
+        images: 1
+    },
+    {
+        id: 49,
+        title: "Sintra + Ativa",
+        date: "14/09/2024 - 15/09/2024",
+        description: "A AUR esteve presente no evento Sintra + Ativa no Parque Urbano da Cavaleira, onde foi feita uma atividade de iniciação ao rugby para as crianças.",
+        images: 1
+    },
+    {
+        id: 48,
+        title: "Festas da Nossa Senhora da Natividade",
+        date: "05/09/2024 - 08/09/2024",
+        description: "A AUR esteve presente nas Festas da Nossa Senhora da Natividade, em Mem Martins, com uma banca para divulgar o projeto e incentivar à prática de rugby.",
+        images: 1
+    },
+    {
+        id: 47,
+        title: "Colónias de Férias JFAMM",
+        date: "25/07/2024",
+        description: "A AUR deu uma iniciação ao rugby nas Colónias de Férias da JFAMM, na escola Visconde de Juromenha.",
+        images: 2
+    },
+    {
+        id: 46,
+        title: "Projeto \"Movimento Tag\"",
+        date: "24/07/2024",
+        description: "Este novo projeto criado pela AUR consiste em promover junto da faixa etária idosa o Tag Rugby adaptado e jogado a andar.",
+        images: 1
+    },
+    {
+        id: 45,
+        title: "Desporto na Praia",
+        date: "20/07/2024",
+        description: "A AUR esteve na Praia das Maçãs, onde foi feito um treino para as pessoas que estavam a frequentar a praia se poderem juntar.",
+        images: 1
+    },
+    {
+        id: 44,
+        title: "Colónias de Férias JFAMM",
+        date: "18/07/2024",
+        description: "A AUR deu uma iniciação ao rugby nas Colónias de Férias da JFAMM, nas escolas Mestre Domingos Saraiva e Visconde de Juromenha.",
+        images: 1
+    },
+    {
+        id: 43,
+        title: "Férias Desportivas Praia das Maçãs",
+        date: "17/07/2024",
+        description: "A AUR esteve presente nas Férias Desportivas na Praia das Maçãs, onde foi feita uma atividade de iniciação ao rugby para os participantes.",
+        images: 1
+    },
+    {
+        id: 42,
+        title: "Sintra + Ativa",
+        date: "13/07/2024 - 14/07/2024",
+        description: "A AUR esteve presente no evento Sintra + Ativa na Serra das Minas, onde foi feita uma atividade de iniciação ao rugby para as crianças.",
+        images: 1
+    },
+    {
         id: 41,
         title: "IV Feira das Instituições",
         date: "05/07/2024 - 07/07/2024",
@@ -81,7 +151,7 @@ const newsItems = [
         id: 30,
         title: "3° Etapa do Campeonato Nacional F 7's",
         date: "11/05/2024",
-        description: "As nossas séniores femininas marcaram presença na 3° etapa do Campeonato Nacional de Sevens Feminino, que decorreu no campo da Agrária, em Coimbra.",
+        description: "As nossas séniores femininas marcaram presença na 3° etapa do Campeonato Nacional de Sevens Feminino, os jogos decorreram no campo da Agrária, em Coimbra.",
         images: 1
     },
     {
@@ -95,7 +165,7 @@ const newsItems = [
         id: 28,
         title: "2° Etapa do Campeonato Nacional F 7's",
         date: "04/05/2024",
-        description: "As nossas séniores femininas marcaram presença na 2° etapa do Campeonato Nacional de Sevens Feminino, que decorreu no campo do São Miguel, onde contaram com o apoio dos séniores masculinos.",
+        description: "As nossas séniores femininas marcaram presença na 2° etapa do Campeonato Nacional de Sevens Feminino, os jogos decorreram no campo do São Miguel, onde contaram com o apoio dos séniores masculinos.",
         images: 1
     },
     {
@@ -109,7 +179,7 @@ const newsItems = [
         id: 26,
         title: "1° Etapa do Campeonato Nacional F 7's",
         date: "26/04/2024",
-        description: "As nossas séniores femininas marcaram presença na 1° etapa do Campeonato Nacional de Sevens Feminino, que decorreu no Estádio Universitário de Lisboa.",
+        description: "As nossas séniores femininas marcaram presença na 1° etapa do Campeonato Nacional de Sevens Feminino,os jogos decorreram no Estádio Universitário de Lisboa.",
         images: 1
     },
     {
@@ -123,7 +193,7 @@ const newsItems = [
         id: 24,
         title: "Fim de semana de campeões",
         date: "21/04/2024",
-        description: "Duas atletas seniores femininas da AUR, Ana Costa e Yara Fonseca, foram campeãs nacionais pelo Sporting da Taça de Portugal Feminina! Os nossos sub-14 participaram num torneio com o Benfica nas Caldas da Rainha, onde integraram 2 equipas e uma delas ficou em 1º lugar.",
+        description: "Duas atletas seniores femininas da AUR, Ana Costa e Yara Fonseca, foram campeãs nacionais pelo Sporting da Taça de Portugal Feminina! Os nossos sub-14 participaram num torneio com o Benfica, os jogos decorreram nas Caldas da Rainha, onde integraram 2 equipas e uma delas ficou em 1º lugar.",
         images: 2
     },
     {
@@ -137,7 +207,7 @@ const newsItems = [
         id: 22,
         title: "Rugby Youth Festival 2024",
         date: "07/04/2024",
-        description: "A AUR marcou presença no Portugal Rugby Youth Festival 2024 com 4 atletas a fazer parte da organização e com escalões sub-13/15/19 a competir contra equipas nacionais e internacionais. Tivémos 5 atletas femininas a jogar em representação da Seleção Regional Sul sub-15.",
+        description: "A AUR marcou presença no Portugal Rugby Youth Festival 2024 com 4 atletas a fazer parte da organização e com escalões sub-13/15/19 a competir contra equipas nacionais e internacionais, em diversos jogos. Tivémos 5 atletas femininas a jogar em representação da Seleção Regional Sul sub-15.",
         images: 5
     },
     {
@@ -221,7 +291,7 @@ const newsItems = [
         id: 9,
         title: "Torneio 7's Emergentes Feminino",
         date: "17/02/2024",
-        description: "As nossas séniores femininas participaram no torneio de sevens emergentes, que decorreu no Campo de Rugby do Direito.",
+        description: "As nossas séniores femininas participaram no torneio de sevens emergentes, os jogos decorreram no Campo de Rugby do Direito.",
         images: 1
     },
     {
@@ -235,7 +305,7 @@ const newsItems = [
         id: 7,
         title: "Jogo Séniores F vs. Agrária",
         date: "04/02/2024",
-        description: "As nossas séniores femininas estiveram em campo juntamente com o Sporting Rugby a disputar os quartos de final da Taça de Portugal.",
+        description: "As nossas séniores femininas estiveram em campo juntamente com o Sporting Rugby a disputar os quartos de final da Taça de Portugal, um grande jogo das nossas leoas.",
         images: 1
     },
     {
@@ -263,7 +333,7 @@ const newsItems = [
         id: 3,
         title: "Final do Campeonato Feminino Nacional",
         date: "28/01/2024",
-        description: "As nossas seniores femininas estiveram em campo juntamente com o Sporting Rugby a disputar a final do Campeonato Nacional de XV.",
+        description: "As nossas seniores femininas estiveram em campo juntamente com o Sporting Rugby a disputar a final do Campeonato Nacional de XV, um grande jogo das nossas leoas.",
         images: 3
     },
     {
