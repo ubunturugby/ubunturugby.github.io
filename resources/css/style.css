@@ -548,7 +548,7 @@ a:hover>div {
 .size-option {
     width: auto; /* Allow flexible width */
     height: auto; /* Adjust height dynamically */
-    padding: 2px 5px;
+    padding: 2px 4px;
     border: 1px solid #f8f9fa;
     text-align: center;
     border-radius: 4px;
