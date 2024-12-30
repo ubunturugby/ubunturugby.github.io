@@ -179,22 +179,23 @@
               const dateB = new Date(b['Data'].replace(/(\d{2})\/(\d{2})\/(\d{4})/, "$2/$1/$3"));
               return dateB - dateA;
             });
-            let idCounter = 1;
+            let idCounter = results.data.length;
 
             // Iterate over the parsed data
             results.data.forEach(row => {
               // Create the object for each row
               const entry = {
-                id: idCounter++, // Auto-increment ID
+                id: idCounter--,
                 title: row['Título'],
                 date: row['Data'],
                 description: row['Descrição'],
-                images: row['Ficheiros'] ? 1 : 0 // Check if there's a file link
+                images: row['Ficheiros'] ? row['Ficheiros'].split(',').length : 0
               };
 
               // Push the object into the array
               newsItems.push(entry);
             });
+            console.log("News items:", newsItems);
             filteredNewsItems = [...newsItems];
             updatePage();
           },
@@ -333,7 +334,7 @@
       // Previous button
       const prevButton = document.createElement("li");
       prevButton.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
-      prevButton.innerHTML = `<a class="page-link text-dark" href="#"><</a>`;
+      prevButton.innerHTML = `<a class="page-link text-dark"><</a>`;
       prevButton.addEventListener("click", () => {
         if (currentPage > 1) {
           currentPage--;
@@ -350,7 +351,7 @@
       if (startPage > 1) {
         const firstPageButton = document.createElement("li");
         firstPageButton.className = `page-item ${1 === currentPage ? 'active' : ''}`;
-        firstPageButton.innerHTML = `<a class="page-link text-dark" href="#">1</a>`;
+        firstPageButton.innerHTML = `<a class="page-link text-dark">1</a>`;
         firstPageButton.addEventListener("click", () => {
           currentPage = 1;
           updatePage();
@@ -368,7 +369,7 @@
       for (let i = startPage; i <= endPage; i++) {
         const pageButton = document.createElement("li");
         pageButton.className = `page-item ${i === currentPage ? 'active' : ''}`;
-        pageButton.innerHTML = `<a class="page-link text-dark" href="#">${i}</a>`;
+        pageButton.innerHTML = `<a class="page-link text-dark">${i}</a>`;
         pageButton.addEventListener("click", () => {
           currentPage = i;
           updatePage();
@@ -386,7 +387,7 @@
 
         const lastPageButton = document.createElement("li");
         lastPageButton.className = `page-item ${totalPages === currentPage ? 'active' : ''}`;
-        lastPageButton.innerHTML = `<a class="page-link text-dark" href="#">${totalPages}</a>`;
+        lastPageButton.innerHTML = `<a class="page-link text-dark">${totalPages}</a>`;
         lastPageButton.addEventListener("click", () => {
           currentPage = totalPages;
           updatePage();
@@ -397,7 +398,7 @@
       // Next button
       const nextButton = document.createElement("li");
       nextButton.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
-      nextButton.innerHTML = `<a class="page-link text-dark" href="#">></a>`;
+      nextButton.innerHTML = `<a class="page-link text-dark">></a>`;
       nextButton.addEventListener("click", () => {
         if (currentPage < totalPages) {
           currentPage++;

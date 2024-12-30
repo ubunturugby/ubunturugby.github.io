@@ -419,6 +419,7 @@ a:hover>div {
 
 .page-link {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .page-item:hover .page-link {
