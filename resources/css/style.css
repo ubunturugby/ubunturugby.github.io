@@ -495,7 +495,6 @@ a:hover>div {
 
 /* Styles for news items */
 .news-item {
-    border-bottom: 1px solid #eee;
     padding: 10px 0;
 }
 
@@ -505,6 +504,46 @@ a:hover>div {
 
 .news-item p {
     color: #666;
+}
+
+#news-container .news-item {
+    display: flex;
+    flex-direction: column;
+    height: 405px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.news-item img {
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#pagination {
+    position: relative;
+    min-height: 50px;
+}
+
+.news-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.load-more {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #ff6600 !important;
+}
+
+
+@media (max-width: 768px) {
+    #news-container .news-item {
+        height: auto;
+        /* Allow flexible height on smaller screens */
+    }
 }
 
 .location-btn {
@@ -733,7 +772,7 @@ a:hover>div {
 
     .pagination .page-link {
         font-size: 1rem;
-        padding: 0.5rem 0.8rem;
+        padding: 0.5rem 0.7rem;
     }
 
     .pagination {

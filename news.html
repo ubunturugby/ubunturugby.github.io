@@ -92,7 +92,7 @@
 
     <div class="d-flex align-items-center justify-content-center mt-5">
       <div class="container" id="news-section">
-        <div class="row" id="news-container">
+        <div class="row gx-4 gy-4" id="news-container" style="min-height: 400px;">
           <!-- News items will be dynamically loaded here -->
         </div>
 
@@ -189,6 +189,7 @@
                 title: row['Título'],
                 date: row['Data'],
                 description: row['Descrição'],
+                type: row['Tipo'],
                 images: row['Ficheiros'] ? row['Ficheiros'].split(',').length : 0
               };
 
@@ -217,7 +218,8 @@
       filteredNewsItems = newsItems.filter(item =>
         item.title.toLowerCase().includes(searchInput) ||
         item.description.toLowerCase().includes(searchInput) ||
-        item.date.toLowerCase().includes(searchInput)
+        item.date.toLowerCase().includes(searchInput) ||
+        item.type.toLowerCase().includes(searchInput)
       );
 
       currentPage = 1; // Reset to the first page when filtering
@@ -225,15 +227,6 @@
     }
 
     document.getElementById('searchInput').addEventListener('input', filterNews);
-
-    // Function to handle image click
-    function handleImageClick(event) {
-      const imageSrc = event.target.src; // Get the clicked image source
-      const modalImage = document.getElementById("modalImage");
-      modalImage.src = imageSrc; // Set the modal image source
-      const imageModal = new bootstrap.Modal(document.getElementById("imageModal"));
-      imageModal.show(); // Show the modal
-    }
 
     // Function to render news items for the current page
     function renderNewsItems(page) {
@@ -251,23 +244,22 @@
 
       // Create a modal element
       const modalHTML = `
-  <div id="imageModal" class="modal fade" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="" alt="Full-size image" id="modalImage">
+    <div id="imageModal" class="modal fade" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="" alt="Full-size image" id="modalImage">
+          </div>
         </div>
       </div>
     </div>
-  </div>
-`;
+  `;
       document.body.insertAdjacentHTML("beforeend", modalHTML); // Append modal to the document body
 
-      // Updated image rendering with click handler
       paginatedItems.forEach((item) => {
         const idx = item.id;
         let carouselIndicators = '', carouselItems = '';
@@ -277,15 +269,15 @@
           for (let i = 0; i < item.images; i++) {
             const isActive = i === 0 ? 'active' : '';
             carouselIndicators += `
-        <button type="button" data-bs-target="#carouselExampleCaptions${titleWithoutSpaces}" data-bs-slide-to="${i}" class="${isActive}" ${i === 0 ? 'aria-current="true"' : ''} aria-label="Slide ${i + 1}"></button>
-      `;
+          <button type="button" data-bs-target="#carouselExampleCaptions${titleWithoutSpaces}" data-bs-slide-to="${i}" class="${isActive}" ${i === 0 ? 'aria-current="true"' : ''} aria-label="Slide ${i + 1}"></button>
+        `;
             carouselItems += `
-        <div class="carousel-item ${isActive}">
-          <div class="d-flex justify-content-center">
-            <img src="news/not${idx}-${i + 1}.jpg" class="img-fluid news-image" alt="${idx}-${i + 1}" onclick="handleImageClick(event)">
+          <div class="carousel-item ${isActive}">
+            <div class="d-flex justify-content-center">
+              <img src="news/not${idx}-${i + 1}.jpg" class="img-fluid news-image" alt="${idx}-${i + 1}" onclick="handleImageClick(event)">
+            </div>
           </div>
-        </div>
-      `;
+        `;
           }
         }
 
@@ -295,28 +287,53 @@
 
         // HTML for news item card
         const newsHTML = `
-    <div class="col-lg-4 col-md-6 col-sm-12 my-3">
-      <h5 class="text-uppercase text-center font-impact">${item.title}</h5>
-      <div>
-        <div class="carousel-inner mb-3">
-          ${item.images > 1 ? `
-          <div id="carouselExampleCaptions${titleWithoutSpaces}" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-indicators">${carouselIndicators}</div>
-            <div class="carousel-inner">${carouselItems}</div>
+      <div class="col-lg-4 col-md-6 col-sm-12 my-3 news-item">
+        <h5 class="text-uppercase text-center font-impact">${item.title}</h5>
+        <div>
+          <div class="carousel-inner mb-3">
+            ${item.images > 1 ? `
+            <div id="carouselExampleCaptions${titleWithoutSpaces}" class="carousel slide" data-bs-ride="false">
+              <div class="carousel-indicators">${carouselIndicators}</div>
+              <div class="carousel-inner">${carouselItems}</div>
+            </div>
+            ` : `
+            <div class="d-flex justify-content-center">
+              ${img}
+            </div>`}
           </div>
-          ` : `
-          <div class="d-flex justify-content-center">
-            ${img}
-          </div>`}
+        </div>
+        <div class="text-justify news-text">
+          <small class="text-muted">${item.date}</small><br>
+          <small class="news-description">${item.description}</small>
+          <span class="load-more text-" style="cursor: pointer; display: none;">Ver Mais...</span>
         </div>
       </div>
-      <div class="text-justify news-text">
-        <small class="text-muted">${item.date}</small><br>
-        <small>${item.description}</small>
-      </div>
-    </div>
-  `;
+    `;
         newsContainer.innerHTML += newsHTML;
+      });
+
+      // Truncate descriptions and show "Load More..."
+      const descriptions = document.querySelectorAll(".news-description");
+      descriptions.forEach((description) => {
+        const loadMore = description.nextElementSibling;
+        const maxHeight = 110; // Approx. 5 lines of text (adjust based on your CSS)
+
+        if (description.scrollHeight > maxHeight) {
+          description.style.maxHeight = `${maxHeight}px`;
+          description.style.overflow = "hidden";
+          description.style.display = "-webkit-box";
+          description.style.webkitBoxOrient = "vertical";
+          description.style.webkitLineClamp = 4;
+
+          loadMore.style.display = "inline";
+          loadMore.addEventListener("click", () => {
+            description.style.maxHeight = "none";
+            description.style.overflow = "visible";
+            loadMore.style.display = "none";
+            description.parentElement.parentElement.style.transition = "height 0.3s ease";
+            description.parentElement.parentElement.style.height = `${description.scrollHeight + 320}px`; // Adjust height dynamically
+          });
+        }
       });
     }
 
@@ -414,11 +431,6 @@
     function updatePage() {
       renderNewsItems(currentPage);
       renderPagination();
-      // Scroll to top of news section
-      if (currentPage !== 1) {
-        const newsSection = document.getElementById("news-section");
-        newsSection.scrollIntoView({ behavior: "smooth" });
-      }
     }
 
     // Initialize the first page
