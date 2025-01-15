@@ -191,7 +191,7 @@
                     <div class="col d-flex justify-content-center ${soldOut ? 'sold-out' : ''}">
                         <a id="${item.id}">
                             <div class="card text-center border-secondary hover-maximize">
-                                ${item.new ? '<div class="badge badge-novidade">Novidade</div>' : ''}
+                                ${item.type && `<div class="badge badge-${item.type.toLowerCase()}">${item.type}</div>`}
                                 <img src="resources/images/shop/${item.img}" class="card-img-top product-image" alt="${item.title}" />
                                 ${soldOut ? '<div class="sold-out-overlay"></div>' : ''}
                                 <div class="card-body">
@@ -272,7 +272,7 @@
                                 },
                                 link: row['Link'],
                                 orderOnly: row['Apenas por encomenda'] !== '',
-                                new: row['Novidade'] !== ''
+                                type: row['Tipo']
                             };
                             entry.sizes = entry.sizes.filter(size => row[size.label] !== 'x');
                             // Push the object into the array
@@ -285,8 +285,11 @@
                 });
             }).then(() => {
                 shopItems.sort((a, b) => {
-                    if (a.new && !b.new) return -1;
-                    if (!a.new && b.new) return 1;
+                    const typeOrder = { 'Novidade': 1, 'Popular': 2 };
+                    const aTypeOrder = typeOrder[a.type] || 3;
+                    const bTypeOrder = typeOrder[b.type] || 3;
+
+                    if (aTypeOrder !== bTypeOrder) return aTypeOrder - bTypeOrder;
                     return b.prices.members - a.prices.members;
                 });
                 // Call the function to render the shop items
