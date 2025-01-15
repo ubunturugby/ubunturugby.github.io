@@ -128,8 +128,7 @@ a:hover>div {
 }
 
 .background {
-    max-width: 1900px;
-    max-height: 940px;
+    max-height: 120vh;
     background-image: url("../../resources/images/bg.jpg");
     background-repeat: no-repeat;
     object-fit: cover;
