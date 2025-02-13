@@ -150,7 +150,8 @@
         </div>
       </div>
       <div class="text-center pb-5">
-        Ubuntu Rugby <script>document.write(new Date().getFullYear());</script>
+        Ubuntu Rugby
+        <script>document.write(new Date().getFullYear());</script>
         <i class="bi bi-c-circle text-light"></i>
         All rights reserved.
       </div>
@@ -313,28 +314,27 @@
       });
 
       // Truncate descriptions and show "Load More..."
-      const descriptions = document.querySelectorAll(".news-description");
-      descriptions.forEach((description) => {
-        const loadMore = description.nextElementSibling;
-        const maxHeight = 110; // Approx. 5 lines of text (adjust based on your CSS)
+      document.querySelectorAll(".news-item").forEach((newsItem) => {
+        const description = newsItem.querySelector(".news-description");
+        const loadMore = newsItem.querySelector(".load-more");
 
-        if (description.scrollHeight > maxHeight) {
-          description.style.maxHeight = `${maxHeight}px`;
-          description.style.overflow = "hidden";
-          description.style.display = "-webkit-box";
-          description.style.webkitBoxOrient = "vertical";
-          description.style.webkitLineClamp = 4;
-
-          loadMore.style.display = "inline";
-          loadMore.addEventListener("click", () => {
-            description.style.maxHeight = "none";
-            description.style.overflow = "visible";
-            loadMore.style.display = "none";
-            description.parentElement.parentElement.style.transition = "height 0.3s ease";
-            description.parentElement.parentElement.style.height = `${description.scrollHeight + 320}px`; // Adjust height dynamically
-          });
+        if (description.scrollHeight > description.clientHeight) {
+          loadMore.style.display = "inline"; // Show "Ver mais"
         }
+
+        loadMore.addEventListener("click", () => {
+          description.classList.toggle("expanded");
+
+          if (description.classList.contains("expanded")) {
+            newsItem.style.height = "auto";
+            loadMore.textContent = "Ver menos";
+          } else {
+            newsItem.style.height = "390px";
+            loadMore.textContent = "Ver mais";
+          }
+        });
       });
+
     }
 
     // Function to render pagination controls with mobile-friendly optimization

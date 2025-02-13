@@ -151,7 +151,6 @@ a:hover>div {
 
 .card {
     background-color: rgb(0, 0, 0);
-    cursor: pointer;
 }
 
 .btn-comprar {
@@ -508,7 +507,7 @@ a:hover>div {
 #news-container .news-item {
     display: flex;
     flex-direction: column;
-    height: 405px;
+    height: 390px;
     overflow: hidden;
     padding: 15px;
 }
@@ -526,15 +525,27 @@ a:hover>div {
 
 .news-description {
     display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* Number of lines before truncating */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-height: 6em;
+    /* Adjust based on line height */
+    transition: max-height 0.3s ease-in-out;
+}
+
+.news-description.expanded {
+    -webkit-line-clamp: unset;
+    max-height: 20em;
 }
 
 .load-more {
     font-weight: bold;
     margin-top: 5px;
     color: #ff6600 !important;
+    display: block;
+    cursor: pointer;
 }
 
 
@@ -639,6 +650,10 @@ a:hover>div {
 .shop-btn {
     background-color: #007bff;
     color: white;
+}
+
+.card-img-top {
+    cursor: pointer;
 }
 
 /* Grayscale for sold out items */
