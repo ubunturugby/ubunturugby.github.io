@@ -40,9 +40,6 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="w-100 d-flex justify-content-center">
                     <ul class="navbar-nav fs-5 gap-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="rugby_week.html">Campo Desportivo</a>
-                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="about.html" id="navbarDarkDropdownMenuLink"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -288,9 +285,9 @@
                 });
             }).then(() => {
                 shopItems.sort((a, b) => {
-                    const typeOrder = { 'Novidade': 1, 'Popular': 2 };
-                    const aTypeOrder = typeOrder[a.type] || 3;
-                    const bTypeOrder = typeOrder[b.type] || 3;
+                    const typeOrder = { 'Novidade': 1, 'Popular': 3 };
+                    const aTypeOrder = typeOrder[a.type] || (a.type == '' ? 4 : 2);
+                    const bTypeOrder = typeOrder[b.type] || (b.type == '' ? 4 : 2);
 
                     if (aTypeOrder !== bTypeOrder) return aTypeOrder - bTypeOrder;
                     return b.prices.members - a.prices.members;
