@@ -595,21 +595,21 @@ a:hover>div {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Badge style */
-.badge-novidade {
+.badge {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    background-color: #ff6600 !important;
     color: white;
+    background-color: black !important;
+
+}
+
+.badge-novidade {
+    background-color: #ff6600 !important;
 }
 
 .badge-popular {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    background-color: black !important;
-    color: white;
+    background-color: rgb(251, 97, 97) !important;
 }
 
 /* Size option styles */
