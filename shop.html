@@ -71,11 +71,17 @@
                         </li>
                     </ul>
                 </div>
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-outline-light position-relative" id="cartButton" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+                        <i class="bi bi-cart3"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+                    </button>
                 <div class="registration">
                     <a class="btn btn-dark btn-brand" href='https://docs.google.com/forms/d/e/1FAIpQLScWad4BTzEXU8SoE3Hf_WUfhAttyhwxmo9vKIiA6DedclHyog/viewform' target="_blank"
                         rel="noopener noreferrer">
                         INSCRIÇÃO
                     </a>
+                </div>
                 </div>
             </div>
         </div>
@@ -97,6 +103,72 @@
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="shop-items">
                 <!-- Dynamic Cards will be inserted here -->
             </div>
+        </div>
+    </div>
+
+    <!-- Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title font-impact" id="cartOffcanvasLabel">Carrinho</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="alert alert-warning small" role="alert">
+                Este formulário será utilizado para efetuar encomendas da Academia Ubuntu Rugby.<br/>
+                Todas as encomendas efetuadas só serão válidas após efetuado o pagamento.<br/>
+                O pagamento pode ser efetuado em dinheiro ou por Mbway, para o nº de telemóvel da AUR:<br/><strong>932 606 500</strong>.
+            </div>
+            <div id="cartItems"></div>
+            <hr />
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <strong>Total</strong>
+                <strong id="cartTotal">0</strong>
+                <img src="resources/images/rugby-ball.png" class="ms-1" alt="Rugby Ball" width="15" />
+            </div>
+            <div class="mb-3">
+                <label for="buyerName" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="buyerName" placeholder="O seu nome">
+            </div>
+            <div class="mb-3">
+                <label for="buyerPhone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="buyerPhone" placeholder="(+351) 912 345 678">
+            </div>
+            <div class="mb-3">
+                <label for="relation" class="form-label">Relação com a AUR</label>
+                <select class="form-select" id="relation">
+                    <option value="" selected>Selecione...</option>
+                    <option value="Atleta/Sócio">Atleta/Sócio</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="scale" class="form-label">Escalão</label>
+                <select class="form-select" id="scale">
+                    <option value="" selected>Selecione...</option>
+                    <option>Sub-6</option>
+                    <option>Sub-8</option>
+                    <option>Sub-10</option>
+                    <option>Sub-12</option>
+                    <option>Sub-14</option>
+                    <option>Sub-16</option>
+                    <option>Sub-19</option>
+                    <option>Sénior</option>
+                    <option>Outro</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="payment" class="form-label">Método de pagamento</label>
+                <select class="form-select" id="payment">
+                    <option value="" selected>Selecione...</option>
+                    <option>MBWay</option>
+                    <option>Numerário</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="notes" class="form-label">Notas</label>
+                <textarea class="form-control" id="notes" rows="3" placeholder="Tamanhos especiais, observações..."></textarea>
+            </div>
+            <button class="btn btn-success w-100" id="checkoutButton">Finalizar Pedido</button>
         </div>
     </div>
 
@@ -185,10 +257,11 @@
             const container = document.getElementById('shop-items');
             shopItems.forEach(item => {
                 const soldOut = item.sizes.every(size => !size.available);
+                // !size.available
                 const sizes = item.sizes.map(size => `
-                    <span class="size-option ${!size.available ? 'size-unavailable' : ''}">
+                    <button class="btn btn-sm me-1 mb-1 ${false ? 'btn-secondary' : 'btn-outline-light'} size-option" ${false ? 'disabled' : ''} data-size="${size.label}" data-item="${item.id}">
                         ${size.label}
-                    </span>
+                    </button>
                 `).join('');
                 const cardHTML = `
                     <div class="col d-flex justify-content-center ${soldOut ? 'sold-out' : ''}">
@@ -199,7 +272,7 @@
                                 ${soldOut ? '<div class="sold-out-overlay"></div>' : ''}
                                 <div class="card-body">
                                     <h6 class="card-title">${item.title}</h6>
-                                    <div class="d-flex justify-content-center my-2 size-wrapper">${sizes}</div>
+                                    <div class="d-flex flex-wrap justify-content-center my-2 size-wrapper">${sizes}</div>
                                     <hr />
                                     <div class="row">
                                         ${item.prices.others !== '' ? `
@@ -215,8 +288,10 @@
                                     </div>
                                 </div>
                                 <div class="card-footer mb-2">
-                                    <a class="btn ${soldOut ? 'btn-danger' : item.orderOnly ? 'btn-warning' : 'btn-comprar'} w-100" href="${item.link}" target="_blank" rel="noopener noreferrer">${soldOut ? 'Esgotado' :
-                        item.orderOnly ? 'Apenas por Encomenda' : 'Comprar'}</a>
+                                    ${soldOut ? `<button class="btn btn-danger w-100" disabled>Esgotado</button>` :
+                                    `<div class="d-flex gap-2">
+                                        <button class="btn ${item.orderOnly ? 'btn-warning' : 'btn-comprar'} w-100" data-add-to-cart="${item.id}">${item.orderOnly ? 'Apenas por Encomenda' : 'Adicionar ao Carrinho'}</button>
+                                    </div>`}
                                 </div>
                             </div>
                         </a>
@@ -225,10 +300,14 @@
             });
 
             setupImageModal();
+            wireShopInteractions();
         }
 
 
         const csvFilePath = 'resources/Stock Merch 2024-25.csv';
+        // Formspree endpoint: https://formspree.io/f/YOUR_FORM_ID
+        // Create free account at formspree.io, create form for geral@ubunturugby.pt, copy endpoint here
+        const ORDER_ENDPOINT = 'https://formspree.io/f/xkgdeaae';
 
         let shopItems = [];
 
@@ -298,6 +377,264 @@
                 // Call the function to render the shop items
                 createShopItems();
             });
+
+        // --- Simple Cart Logic ---
+        const cart = JSON.parse(localStorage.getItem('ubuntuCart') || '[]');
+        let priceMode = 'members'; // 'members' | 'others'
+
+        function saveCart() {
+            localStorage.setItem('ubuntuCart', JSON.stringify(cart));
+            updateCartBadge();
+        }
+
+        function updateCartBadge() {
+            const count = cart.reduce((sum, i) => sum + i.qty, 0);
+            const badge = document.getElementById('cartCount');
+            if (badge) badge.textContent = count;
+        }
+
+        function wireShopInteractions() {
+            // Size selection toggle per item
+            document.querySelectorAll('.size-option').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const itemId = btn.getAttribute('data-item');
+                    const wrapper = btn.closest('.size-wrapper');
+                    wrapper.querySelectorAll('.size-option').forEach(b => {
+                        b.classList.remove('active', 'btn-light', 'text-dark');
+                        if (!b.classList.contains('btn-secondary')) b.classList.add('btn-outline-light');
+                    });
+                    btn.classList.add('active', 'btn-light', 'text-dark');
+                    btn.classList.remove('btn-outline-light');
+                });
+            });
+
+            // Add to cart buttons (qty fixed to 1 here; ajustar depois no carrinho)
+            document.querySelectorAll('[data-add-to-cart]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const itemId = btn.getAttribute('data-add-to-cart');
+                    const item = shopItems.find(i => i.id === itemId);
+                    if (!item) return;
+                    const sizeActive = btn.closest('.card').querySelector('.size-option.active');
+                    const size = sizeActive ? sizeActive.getAttribute('data-size') : null;
+                    if (!size) {
+                        alert('Por favor selecione um tamanho.');
+                        return;
+                    }
+                    const qty = 1;
+                    const existing = cart.find(ci => ci.id === item.id && ci.size === size);
+                    if (existing) {
+                        existing.qty += qty;
+                    } else {
+                        cart.push({ id: item.id, title: item.title, size, qty });
+                    }
+                    saveCart();
+                    renderCart();
+                    const offcanvasEl = document.getElementById('cartOffcanvas');
+                    const oc = bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
+                    oc.show();
+                });
+            });
+
+            updateCartBadge();
+        }
+
+        function priceStringForItem(item) {
+            const isOthers = priceMode === 'others';
+            const chosen = isOthers ? (item.prices.others || item.prices.members) : (item.prices.members || item.prices.others);
+            return chosen || '0';
+        }
+
+        function priceNumber(str) {
+            const n = parseFloat(String(str).replace(',', '.').replace(/[^0-9.]/g, ''));
+            return isNaN(n) ? 0 : n;
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cartItems');
+            const totalEl = document.getElementById('cartTotal');
+            if (!container) return;
+            container.innerHTML = '';
+            let total = 0;
+            cart.forEach((ci, idx) => {
+                const item = shopItems.find(i => i.id === ci.id);
+                const priceStr = item ? priceStringForItem(item) : '0';
+                const lineTotal = priceNumber(priceStr) * ci.qty;
+                total += lineTotal;
+                const row = document.createElement('div');
+                row.className = 'd-flex justify-content-between align-items-center mb-2';
+                row.innerHTML = `
+                    <div>
+                        <strong>${ci.title}</strong>
+                        <div class="text-muted">Tamanho: ${ci.size}</div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="${ci.qty}" class="form-control form-control-sm" style="max-width:70px" data-cart-index="${idx}" />
+                        <span>${priceStr}</span>
+                        <img src="resources/images/rugby-ball.png" class="ms-1" alt="Rugby Ball" width="15" />
+                        <button class="btn btn-sm btn-outline-danger" data-remove-index="${idx}"><i class="bi bi-trash"></i></button>
+                    </div>`;
+                container.appendChild(row);
+            });
+            totalEl.textContent = total.toString();
+
+            // Wire qty changes
+            container.querySelectorAll('[data-cart-index]').forEach(inp => {
+                inp.addEventListener('change', () => {
+                    const idx = parseInt(inp.getAttribute('data-cart-index'), 10);
+                    const val = Math.max(1, parseInt(inp.value, 10));
+                    cart[idx].qty = val;
+                    saveCart();
+                    renderCart();
+                });
+            });
+            // Remove
+            container.querySelectorAll('[data-remove-index]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const idx = parseInt(btn.getAttribute('data-remove-index'), 10);
+                    cart.splice(idx, 1);
+                    saveCart();
+                    renderCart();
+                });
+            });
+        }
+
+        async function submitOrderToSheet(order) {
+            if (!ORDER_ENDPOINT) return { ok: false, skipped: true };
+            try {
+                // Format date as dd-mm-yyyy
+                const date = new Date(order.timestamp);
+                const day = String(date.getDate()).padStart(2, '0');
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const year = date.getFullYear();
+                const formattedDate = `${day}-${month}-${year}`;
+                
+                // Format items as readable text
+                const itemsText = order.items.map(item => 
+                    `${item.title} | Tamanho: ${item.size} | Quantidade: ${item.qty} | Preço: ${item.price}`
+                ).join('\n');
+                
+                // Format as form-data for Formspree compatibility
+                const formData = new FormData();
+                formData.append('Data', formattedDate);
+                formData.append('Nome', order.name);
+                formData.append('Telemóvel', order.phone);
+                formData.append('Relação com a AUR', order.relation);
+                formData.append('Escalão', order.scale);
+                formData.append('Método de pagamento', order.payment);
+                formData.append('Itens', itemsText);
+                formData.append('Total', order.total.toString());
+                formData.append('Notas', order.notes);
+                
+                // Fire the request but don't wait for response (CORS issues)
+                // Formspree will process it server-side regardless
+                fetch(ORDER_ENDPOINT, {
+                    method: 'POST',
+                    body: formData
+                }).catch(e => console.log('Fetch sent (CORS may block response):', e));
+                
+                // Always return success since Formspree queues it server-side
+                return { ok: true };
+            } catch (e) {
+                console.error('Order submit error', e);
+                return { ok: false, error: e };
+            }
+        }
+
+        // Checkout via email composition
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkoutBtn = document.getElementById('checkoutButton');
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', () => {
+                    if (cart.length === 0) {
+                        alert('O carrinho está vazio.');
+                        return;
+                    }
+                    const relation = document.getElementById('relation').value;
+                    const scale = document.getElementById('scale').value;
+                    const payment = document.getElementById('payment').value;
+                    const name = document.getElementById('buyerName').value.trim();
+                    const phone = document.getElementById('buyerPhone').value.trim();
+                    const notes = document.getElementById('notes').value.trim();
+                    if (!relation || !scale || !payment || !name) {
+                        alert('Por favor preencha Relação, Escalão, Método de pagamento, e Nome.');
+                        return;
+                    }
+                    const lines = cart.map(ci => {
+                        const item = shopItems.find(i => i.id === ci.id);
+                        const priceStr = item ? priceStringForItem(item) : '0';
+                        return `• ${ci.title} | Tam: ${ci.size} | Qt: ${ci.qty} | Preço: ${priceStr}`;
+                    });
+                    const total = cart.reduce((sum, ci) => {
+                        const item = shopItems.find(i => i.id === ci.id);
+                        const priceStr = item ? priceStringForItem(item) : '0';
+                        return sum + priceNumber(priceStr) * ci.qty;
+                    }, 0);
+                    const intro = `Este formulário será utilizado para efetuar encomendas da Academia Ubuntu Rugby.\n` +
+                                   `Todas as encomendas efetuadas só serão válidas após efetuado o pagamento.\n` +
+                                   `O pagamento pode ser efetuado em dinheiro ou por Mbway, para o nº de telemóvel da AUR:\n` +
+                                   `932 606 500.`;
+
+                    const emailBodyText =
+                        `${intro}\n\n` +
+                        `Pedido Loja Ubuntu\n\n` +
+                        `Relação com a AUR: ${relation}\n` +
+                        `Escalão: ${scale}\n` +
+                        `Método de pagamento: ${payment}\n\n` +
+                        `Nome: ${name}\n\nTelefone: ${phone}\n\n` +
+                        `Itens:\n${lines.join('\n')}\n\n` +
+                        `Total: ${total} bolas\n\n` +
+                        `Notas: ${notes}`;
+
+                    // Build order object for optional backend submit (email + sheet)
+                    const order = {
+                        timestamp: new Date().toISOString(),
+                        name,
+                        relation,
+                        scale,
+                        payment,
+                        phone,
+                        notes,
+                        total,
+                        items: cart.map(ci => {
+                            const item = shopItems.find(i => i.id === ci.id);
+                            const priceStr = item ? priceStringForItem(item) : '0';
+                            return { title: ci.title, size: ci.size, qty: ci.qty, price: priceStr };
+                        })
+                    };
+
+                    // Fire-and-forget submit to Formspree (if configured)
+                    submitOrderToSheet(order).then(r => {
+                        if (r?.ok) {
+                            alert('Pedido enviado com sucesso.');
+                            // Clear cart after successful submission
+                            cart.length = 0;
+                            saveCart();
+                            renderCart();
+                            // Close cart offcanvas
+                            const offcanvasEl = document.getElementById('cartOffcanvas');
+                            const oc = bootstrap.Offcanvas.getInstance(offcanvasEl);
+                            if (oc) oc.hide();
+                        } else if (r?.skipped) {
+                            // Fallback: abrir email se endpoint não estiver configurado
+                            const subject = encodeURIComponent('Pedido de Loja Ubuntu Rugby');
+                            const body = encodeURIComponent(emailBodyText);
+                            window.location.href = `mailto:geral@ubunturugby.pt?subject=${subject}&body=${body}`;
+                        } else {
+                            alert('Não foi possível enviar automaticamente. Por favor tente novamente.');
+                        }
+                    });
+                });
+            }
+            const relationSelect = document.getElementById('relation');
+            if (relationSelect) {
+                relationSelect.addEventListener('change', () => {
+                    priceMode = relationSelect.value === 'Outro' ? 'others' : 'members';
+                    renderCart();
+                });
+            }
+            updateCartBadge();
+            renderCart();
+        });
 
     </script>
 
