@@ -257,9 +257,8 @@
             const container = document.getElementById('shop-items');
             shopItems.forEach(item => {
                 const soldOut = item.sizes.every(size => !size.available);
-                // !size.available
                 const sizes = item.sizes.map(size => `
-                    <button class="btn btn-sm me-1 mb-1 ${false ? 'btn-secondary' : 'btn-outline-light'} size-option" ${false ? 'disabled' : ''} data-size="${size.label}" data-item="${item.id}">
+                    <button class="btn btn-sm me-1 mb-1 ${!size.available ? 'btn-secondary' : 'btn-outline-light'} size-option" ${!size.available ? 'disabled' : ''} data-size="${size.label}" data-item="${item.id}">
                         ${size.label}
                     </button>
                 `).join('');
